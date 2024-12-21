@@ -5,10 +5,14 @@
 [^footnote]: 脚注
 
 ```ts
+// 日本語コメントalphabet
 export type Hoge = {
     hoge: string
 }
 
+/** JSDoc
+ * ほげー捕鯨ふがー
+ */
 export const func = (): Hoge => {
     return {
         hoge: "hoge!!!!"
@@ -25,4 +29,4 @@ export const func = (): Hoge => {
 * **abcdefghijklmnopqrstuvwxyz**
 * **ABCDEFGHIJKLMNOPQRSTUVWXYZ**
 
-フォントは、BIZ UD Mincho + IBM Plex Serifにしてみた。
+フォントはBIZ UD Mincho + IBM Plex Serifにしてみた。
