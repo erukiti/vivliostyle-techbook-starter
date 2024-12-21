@@ -1,9 +1,0 @@
-@import url(./fonts/BIZUDGothic.css); 
-@import url(./fonts/BIZUDMincho.css);
-
-:root {
-    --vs-font-family: 'BIZ UD Mincho', serif;
-
-    /* 等幅フォント（コードブロックで利用される）のフォント */
-    /* --vs--monospace-font-family: 'Noto Sans Mono', 'Noto Sans JP', monospace; */
-}

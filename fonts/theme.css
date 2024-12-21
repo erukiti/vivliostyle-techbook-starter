@@ -1,0 +1,34 @@
+@font-face {
+    font-family: 'BIZ UD Gothic';
+    src: url('./fonts/BIZUDGothic-Regular.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BIZ UD Mincho';
+    src: url('./fonts/BIZUDGothic-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BIZ UD Mincho';
+    src: url('./fonts/BIZUDMincho-Regular.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BIZ UD Mincho';
+    src: url('./fonts/BIZUDMincho-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+:root {
+    --vs-font-family: 'BIZ UD Mincho';
+
+    /* 等幅フォント（コードブロックで利用される）のフォント */
+    /* --vs--monospace-font-family: 'Noto Sans Mono', 'Noto Sans JP', monospace; */
+}
