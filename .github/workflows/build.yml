@@ -1,11 +1,9 @@
 name: build book
 
-on:
-  - pull_request
-  - push
+on: [push]
 
 jobs:
-  lint:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
