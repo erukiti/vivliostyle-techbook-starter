@@ -33,4 +33,5 @@ License: SIL Open Font License, Version 1.1.
 * https://github.com/googlefonts/morisawa-biz-ud-gothic
 * https://github.com/googlefonts/morisawa-biz-ud-mincho
 * https://github.com/microsoft/cascadia-code
+* https://github.com/IBM/plex
 

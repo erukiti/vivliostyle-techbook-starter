@@ -1,128 +1,5 @@
-@font-face {
-    font-family: 'gothic';
-    src: url('./BIZUDGothic-Regular.ttf') format('truetype');
-    font-weight: 100;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'gothic';
-    src: url('./BIZUDGothic-Regular.ttf') format('truetype');
-    font-weight: 200;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'gothic';
-    src: url('./BIZUDGothic-Regular.ttf') format('truetype');
-    font-weight: 300;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'gothic';
-    src: url('./BIZUDGothic-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'gothic';
-    src: url('./BIZUDGothic-Regular.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'gothic';
-    src: url('./BIZUDGothic-Bold.ttf') format('truetype');
-    font-weight: 600;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'gothic';
-    src: url('./BIZUDGothic-Bold.ttf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'gothic';
-    src: url('./BIZUDGothic-Bold.ttf') format('truetype');
-    font-weight: 800;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'gothic';
-    src: url('./BIZUDGothic-Bold.ttf') format('truetype');
-    font-weight: 900;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'mincho';
-    src: url('./BIZUDMincho-Regular.ttf') format('truetype');
-    font-weight: 100;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'mincho';
-    src: url('./BIZUDMincho-Regular.ttf') format('truetype');
-    font-weight: 200;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'mincho';
-    src: url('./BIZUDMincho-Regular.ttf') format('truetype');
-    font-weight: 300;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'mincho';
-    src: url('./BIZUDMincho-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'mincho';
-    src: url('./BIZUDMincho-Regular.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'mincho';
-    src: url('./BIZUDMincho-Bold.ttf') format('truetype');
-    font-weight: 600;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'mincho';
-    src: url('./BIZUDMincho-Bold.ttf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'mincho';
-    src: url('./BIZUDMincho-Bold.ttf') format('truetype');
-    font-weight: 800;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'mincho';
-    src: url('./BIZUDMincho-Bold.ttf') format('truetype');
-    font-weight: 900;
-    font-style: normal;
-}
+@import url('./BIZUD.css');
+@import url('./IBMPlexSans.css');
 
 @font-face {
     font-family: 'Cas Mono';
@@ -136,10 +13,20 @@
     font-style: italic;
 }
 
+/* @font-face {
+    font-family: 'Sans';
+    src: url('./IBMPlexSans-Regular.ttf') format("truetype");
+    font-style: normal;
+} */
 
 :root {
-    --vs-font-family: 'mincho';
+    --vs-font-family: 'IBM Plex Sans', 'mincho', sans-serif;
 
     /* 等幅フォント（コードブロックで利用される）のフォント */
     --vs--monospace-font-family: 'Cas Mono', 'gothic';
+
+    font-feature-settings: "palt";
+    /* letter-spacing: -0.05em; */
+    font-feature-settings: "kern" 1;
+    font-kerning: normal;
 }

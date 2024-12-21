@@ -15,3 +15,14 @@ export const func = (): Hoge => {
     }
 }
 ```
+
+* アルファベット(alphabet)混じり。`Alphabet`
+* アルファベット（alphabet）混じり。`Alphabet`
+* abcdefghijklmnopqrstuvwxyz
+* ABCDEFGHIJKLMNOPQRSTUVWXYZ
+* _abcdefghijklmnopqrstuvwxyz_
+* _ABCDEFGHIJKLMNOPQRSTUVWXYZ_
+* **abcdefghijklmnopqrstuvwxyz**
+* **ABCDEFGHIJKLMNOPQRSTUVWXYZ**
+
+フォントは、BIZ UD Mincho + IBM Plex Sansにしてみた。
