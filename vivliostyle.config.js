@@ -5,7 +5,7 @@ module.exports = {
 	size: "B5", // A4: 教科書サイズ、B5: 最近流行りの小さいサイズの技術書
 	theme: [
 		"@vivliostyle/theme-techbook@^2.0.0", // .css or local dir or npm package. default to undefined.
-		"fonts",
+		"./fonts",
 	],
 	entry: ["00-preface.md", "chap-erukiti.md", "99-postscript.md"],
 	entryContext: "./manuscripts", // output: [ // path to generate draft file(s). default to '{title}.pdf'
