@@ -25,4 +25,4 @@ export const func = (): Hoge => {
 * **abcdefghijklmnopqrstuvwxyz**
 * **ABCDEFGHIJKLMNOPQRSTUVWXYZ**
 
-フォントは、BIZ UD Mincho + IBM Plex Sansにしてみた。
+フォントは、BIZ UD Mincho + IBM Plex Serifにしてみた。
