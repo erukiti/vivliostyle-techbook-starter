@@ -28,8 +28,9 @@ bun run preview
 
 ## フォント
 
-https://github.com/googlefonts/morisawa-biz-ud-gothic
-https://github.com/googlefonts/morisawa-biz-ud-mincho
-
 License: SIL Open Font License, Version 1.1. 
+
+* https://github.com/googlefonts/morisawa-biz-ud-gothic
+* https://github.com/googlefonts/morisawa-biz-ud-mincho
+* https://github.com/microsoft/cascadia-code
 

@@ -46,12 +46,14 @@
     font-weight: 700;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'gothic';
     src: url('./BIZUDGothic-Bold.ttf') format('truetype');
     font-weight: 800;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'gothic';
     src: url('./BIZUDGothic-Bold.ttf') format('truetype');
@@ -122,9 +124,22 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Cas Mono';
+    src: url('./CascadiaMono.ttf') format("truetype");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cas Mono';
+    src: url('./CascadiaMonoItalic.ttf') format("truetype");
+    font-style: italic;
+}
+
+
 :root {
-    --vs-font-family: 'mincho', serif;
+    --vs-font-family: 'mincho';
 
     /* 等幅フォント（コードブロックで利用される）のフォント */
-    /* --vs--monospace-font-family: 'Noto Sans Mono', 'Noto Sans JP', monospace; */
+    --vs--monospace-font-family: 'Cas Mono', 'gothic';
 }
