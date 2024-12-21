@@ -19,9 +19,4 @@
 
     /* 等幅フォント（コードブロックで利用される）のフォント */
     --vs--monospace-font-family: 'Cas Mono', 'gothic';
-
-    font-feature-settings: "palt";
-    /* letter-spacing: -0.05em; */
-    font-feature-settings: "kern" 1;
-    font-kerning: normal;
 }
