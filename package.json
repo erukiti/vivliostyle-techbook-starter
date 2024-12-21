@@ -1,0 +1,15 @@
+{
+  "name": "vivliostyle-book-sample",
+  "description": "VivlioStyleを採用した技術同人誌のサンプル",
+  "version": "0.0.0",
+  "author": "erukiti <erukiti+github@gmail.com>",
+  "scripts": {
+    "build": "vivliostyle build",
+    "preview": "vivliostyle preview"
+  },
+  "license": "CC0-1.0",
+  "dependencies": {
+    "@vivliostyle/cli": "latest"
+  },
+  "private": true
+}
