@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'BIZ UD Gothic';
+    src: url('./BIZUDGothic-Regular.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BIZ UD Gothic';
+    src: url('./BIZUDGothic-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}

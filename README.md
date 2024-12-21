@@ -26,3 +26,10 @@ bun run build
 bun run preview
 ```
 
+## フォント
+
+https://github.com/googlefonts/morisawa-biz-ud-gothic
+https://github.com/googlefonts/morisawa-biz-ud-mincho
+
+License: SIL Open Font License, Version 1.1. 
+
