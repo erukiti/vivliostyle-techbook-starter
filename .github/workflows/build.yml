@@ -17,3 +17,9 @@ jobs:
 
       - name: build book
         run: bun run build
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: Artifacts
+          path: *.pdf
+          retention-days: 3
