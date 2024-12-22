@@ -16,7 +16,7 @@ jobs:
         run: bun install
 
       - name: build book
-        run: bun run build
+        run: bun run build --press-ready
 
       - uses: actions/upload-artifact@v3
         with:
