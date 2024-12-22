@@ -1,18 +1,26 @@
 module.exports = {
-  title: "技術同人誌サンプル", // populated into `publication.json`, default to `title` of the first entry or `name` in `package.json`.
+  title: "とにかく楽にMarkdownで本を作りたい！", // populated into `publication.json`, default to `title` of the first entry or `name` in `package.json`.
   author: "erukiti <erukiti+github@gmail.com>", // default to `author` in `package.json` or undefined.
   language: "ja", // default to undefined.
-  size: "B5", // A4: 教科書サイズ、B5: 最近流行りの小さいサイズの技術書
+  size: "JIS-B5", // A4: 教科書サイズ、JIS-B5: 最近流行りの小さいサイズの技術書
   theme: [
     "@vivliostyle/theme-techbook@^2.0.0", // .css or local dir or npm package. default to undefined.
     "./fonts",
   ],
   entry: [
+    // 表紙
+    // { rel: "cover" },
+
     // 前書き
     "00-preface.md",
 
+    // 目次
+    { rel: "contents" },
+
     // 本文
-    "chap-erukiti.md",
+    "chap-font.md",
+    "chap-toc.md",
+    "chap-sample.md",
 
     // 後書き
     "99-postscript.md"
