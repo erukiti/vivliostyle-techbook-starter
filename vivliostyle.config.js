@@ -18,6 +18,9 @@ module.exports = {
     { rel: "contents" },
 
     // 本文
+    "chap-setup.md",
+    "chap-markdown.md",
+    "chap-theme.md",
     "chap-font.md",
     "chap-toc.md",
     "chap-sample.md",
@@ -38,8 +41,18 @@ module.exports = {
   toc: true, // whether generate and include ToC HTML or not, default to 'false'.
   tocTitle: "目次",
   // cover: './cover.png', // cover image. default to undefined.
-  // vfm: { // options of VFM processor
-  //   hardLineBreaks: true, // converts line breaks of VFM to <br> tags. default to 'false'.
-  //   disableFormatHtml: true, // disables HTML formatting. default to 'false'.
-  // }
+  vfm: { // options of VFM processor
+    //   hardLineBreaks: true, // converts line breaks of VFM to <br> tags. default to 'false'.
+    //   disableFormatHtml: true, // disables HTML formatting. default to 'false'.
+
+    customBlocks: [
+      {
+        name: 'column',
+        type: 'block',
+        match: /^:::column\s*$/,
+        endMatch: /^:::\s*$/,
+      }
+    ]
+
+  }
 };
