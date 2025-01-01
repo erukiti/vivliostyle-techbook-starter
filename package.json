@@ -9,7 +9,9 @@
   },
   "license": "CC0-1.0",
   "dependencies": {
-    "@vivliostyle/cli": "latest"
+    "@vivliostyle/cli": "latest",
+    "playwright": "^1.49.1",
+    "rehype-mermaid": "^3.0.0"
   },
   "private": true
 }
