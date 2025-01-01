@@ -15,6 +15,9 @@ jobs:
       - name: Install dependencies
         run: bun install
 
+      - name: Install Playwright
+        run: bunx playwright install
+
       - name: build book
         run: bun run build --press-ready
 
