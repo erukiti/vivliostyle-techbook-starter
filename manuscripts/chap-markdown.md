@@ -1,3 +1,7 @@
+---
+class: chapter
+---
+
 # Markdown
 
 VivlioStyleではHTMLもしくはMarkdownで原稿を書きます。よほど奇特な人でも無い限りMarkdownで書くことを強く推奨します。
