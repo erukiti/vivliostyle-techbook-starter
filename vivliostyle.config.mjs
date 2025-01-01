@@ -17,7 +17,7 @@ export default {
 		// { rel: "cover" },
 
 		// 前書き
-		// "00-preface.md",
+		"00-preface.md",
 
 		// 目次
 		{ rel: "contents" },
