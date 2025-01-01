@@ -7,7 +7,9 @@ export default {
 	language: "ja", // default to undefined.
 	size: "JIS-B5", // A4: 教科書サイズ、JIS-B5: 最近流行りの小さいサイズの技術書
 	theme: [
+		// "@vivliostyle/theme-base@^2.0.0", // .css or local dir or npm package. default to undefined.
 		"@vivliostyle/theme-techbook@^2.0.0", // .css or local dir or npm package. default to undefined.
+		"./theme-nice-techbook",
 		"./fonts",
 	],
 	entry: [
@@ -15,7 +17,7 @@ export default {
 		// { rel: "cover" },
 
 		// 前書き
-		"00-preface.md",
+		// "00-preface.md",
 
 		// 目次
 		{ rel: "contents" },
@@ -52,15 +54,6 @@ export default {
 		// options of VFM processor
 		//   hardLineBreaks: true, // converts line breaks of VFM to <br> tags. default to 'false'.
 		//   disableFormatHtml: true, // disables HTML formatting. default to 'false'.
-
-		customBlocks: [
-			{
-				name: "column",
-				type: "block",
-				match: /^:::column\s*$/,
-				endMatch: /^:::\s*$/,
-			},
-		],
 	},
 	documentProcessor: (config, metadata) => {
 		return VFM(config, metadata).use(rehypeMermaid, { strategy: "img-png" });

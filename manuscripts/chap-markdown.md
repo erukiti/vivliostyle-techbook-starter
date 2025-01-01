@@ -230,8 +230,8 @@ VivlioStyle|Markdown|.md|CSS組版で自由度の高い本を書けるソフト
 ```
 
 
-### 歴史
-:::column
+<div class="column">
+<div class="column-title">歴史</div>
 
 Markdownと似たようなことをする書式は実は無限といえるくらいあります。たとえばWikipediaは、MediaWikiというシステムで動いていて、MediaWikiの書式があります。また、Wikiの元祖であるWikiWikiWebの書式もありますしWiki系の書式は数十種類以上あります。
 
@@ -243,4 +243,4 @@ GitHub, Notion, Confluence他、様々なシェアトップのツールが、Mar
 
 これはWikiと同じ悪夢を生み出すかと思われましたが、GitHubという巨大勢力によりGitHub Flavored Markdownが、ほぼ業界標準になっています。
 
-:::
+</div>
