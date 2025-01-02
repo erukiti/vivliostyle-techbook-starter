@@ -46,6 +46,8 @@ vs-counter-chapterはclass: chapterが定義されているページのみカウ
   --vs--heading-font-family: sans-serif;
   --vs--heading-font-weight: 800;
 
+  /* 目次 */
+  --vs-toc--page-leader-content: leader(' ');
 }
 
 /* まえがき・あとがきなどを除外するため。
@@ -60,10 +62,6 @@ vs-counter-chapterはclass: chapterが定義されているページのみカウ
   /* --vs-theme--page-top-right-content: counter(vs-counter-chapter) '.' counter(vs-counter-sec-h2); */
 }
 
-.chapter h1::before {
-  content: "****";
-}
-
 /* NOTE: 目次に含まれるh1を消すためのワークアラウンド */
 h1:has(+ #toc) {
   display: none;
@@ -74,7 +72,21 @@ h1:has(+ #toc) {
   content: "第" target-counter(attr(href), vs-counter-chapter) "章 ";
 }
 
-/* MEMO: .vivliostyle/themes/packages/@vivliostyle/theme-base/css/partial/toc.css におけるページ番号を出力する方法を参照した。 */
+:is(#toc, [role='doc-toc']) li ol li > a::before {
+  content: target-counter(attr(href), vs-counter-chapter) "." target-counter(attr(href), vs-counter-sec-h2) " ";
+}
+
+:is(#toc, [role='doc-toc']) li {
+  margin-top: 2em;
+  font-weight: 600;
+}
+
+:is(#toc, [role='doc-toc']) li ol li {
+  margin-left: -1em;
+  margin-top: 0em;
+  --vs-toc--page-leader-content: leader('．');
+  font-weight: 500;
+}
 
 
 /* 奥付 */

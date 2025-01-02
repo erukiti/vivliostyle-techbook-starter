@@ -47,7 +47,7 @@ export default {
 	workspaceDir: ".vivliostyle", // directory which is saved intermediate files.
 	toc: {
 		title: "目次", // title of table of contents. default to 'Contents'.
-		maxLevel: 3, // maximum level of headings. default to 3.
+		sectionDepth: 2,
 		includeCover: false, // include cover page in table of contents. default to 'false'.
 	},
 	// cover: './cover.png', // cover image. default to undefined.
@@ -61,8 +61,8 @@ export default {
 			strategy: "img-png",
 			//
 			mermaidConfig: {
-				fontFamily: "'IBM Plex Serif', 'BIZ UD Mincho', sans-serif"
-			}
+				fontFamily: "'IBM Plex Serif', 'BIZ UD Mincho', sans-serif",
+			},
 		});
 	},
 };
