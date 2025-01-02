@@ -13,10 +13,3 @@
     src: url('./CascadiaMonoItalic.ttf') format("truetype");
     font-style: italic;
 }
-
-:root {
-    --vs-font-family: 'IBM Plex Serif', 'mincho', sans-serif;
-
-    /* 等幅フォント（コードブロックで利用される）のフォント */
-    --vs--monospace-font-family: 'Cas Mono', 'gothic';
-}

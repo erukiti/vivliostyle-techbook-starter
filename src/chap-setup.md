@@ -4,6 +4,8 @@ class: chapter
 
 # セットアップ
 
+<div class="flush-right">@erukiti</div>
+
 ViviloStyleはJavaScriptで書かれたソフトウェアです。そのため、VivlioStyleを使うためにはJavaScript環境を構築する必要があります。JavaScriptを動かすための環境は、普通はNode.jsが使われますが、筆者のおすすめはBunです。
 
 ## はじめに手順
@@ -14,7 +16,7 @@ ViviloStyleはJavaScriptで書かれたソフトウェアです。そのため�
 
 この3つの手順です。
 
-## 1. システムにbunをインストールする
+## システムにbunをインストールする
 
 Bunは、Node.jsとほぼ同じことが出来て、Node.jsより遙かに性能が良いJavaScript環境です。
 インストールは簡単です。ターミナルと呼ばれるソフトを起動してください。
@@ -38,7 +40,7 @@ powershell -c "irm bun.sh/install.ps1 | iex"
 
 このようにBunのバージョンが表示されます。されないようなら、一度ターミナルを完全に終了させてから、ターミナルを起動させてみてください。それでも動かない場合は、頑張って！
 
-## 2. create-bookで、本のディレクトリを作成する
+## create-bookで、本のディレクトリを作成する
 
 VivlioStyleは、必要なファイルがそろっている状態で `vivliostyle build` もしくは `vivliostyle preview` コマンドで実行できます。ところが、この必要なファイルを用意するのは面倒なので普通は `create-book` というツールを使ってファイルを作成します。
 

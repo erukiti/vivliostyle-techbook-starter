@@ -32,9 +32,10 @@ export default {
 		"chap-sample.md",
 		"chap-onestop.md",
 		// 後書き
-		"99-postscript.md",
+		"90-postscript.md",
+		"99-colophon.md",
 	],
-	entryContext: "./manuscripts",
+	entryContext: "./src",
 
 	// output: [ // path to generate draft file(s). default to '{title}.pdf'
 	//   './output.pdf', // the output format will be inferred from the name.

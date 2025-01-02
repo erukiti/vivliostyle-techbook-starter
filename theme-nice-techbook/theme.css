@@ -7,13 +7,20 @@ pre {
   padding: 1rem;
   border: 1px solid #ccc;
   border-radius: 4px;
-  background-color: #f8f9fa;
 }
 
 .column-title {
   font-weight: bold;
   margin-bottom: 0.5rem;
-  color: #2c3e50;
+}
+
+.column-title::before {
+  content: "■コラム";
+  margin-right: 0.5rem;
+}
+
+.flush-right {
+  text-align: right;
 }
 
 /*
@@ -21,15 +28,40 @@ https://gihyo.jp/article/2024/04/vivliostyle-03
 vs-counter-chapterはclass: chapterが定義されているページのみカウントされる
 */
 :root {
+  /* 本文フォント */
+  --vs-font-family: 'IBM Plex Serif', 'mincho', sans-serif;
+  /* 等幅フォント（コードブロックで利用される）のフォント */
+
+  --vs--monospace-font-family: 'Cas Mono', 'gothic';
+  --vs--monospace-font-size: 0.9em;
+  --vs--monospace-line-height: 1.4;
+
+  /* 見出し */
+  --vs--h1-text-align: right;
+
+  --vs--heading-line-height: 1.2;
   --vs-section--h1-marker-content: counter(vs-counter-chapter) "章";
   --vs-section--h2-marker-content: counter(vs-counter-chapter) '.' counter(vs-counter-sec-h2);
-  --vs-section--h3-marker-content: counter(vs-counter-chapter) '.' counter(vs-counter-sec-h2) . counter(vs-counter-sec-h3);
+  --vs-section--h3-marker-content: counter(vs-counter-chapter) '.' counter(vs-counter-sec-h2) '.' counter(vs-counter-sec-h3);
+  --vs--heading-font-family: sans-serif;
+  --vs--heading-font-weight: 800;
+
 }
 
+/* まえがき・あとがきなどを除外するため。
+ * 本文用のクラス定義をしている。FrontMatterでclass: chapterを指定すること。
+ */
 .chapter {
   --vs-section--marker-display: inline;
-  /* --vs-section--h1-marker-display: inline;
-  --vs-section--h2-marker-display: inline; */
+
+  /* margin box に番号を付与する */
+  --vs-theme--page-top-right-content: '第' counter(vs-counter-chapter) '章' env(doc-title) ' ';
+  /* --vs-theme--page-top-left-content: '第' counter(vs-counter-chapter) '章' env(doc-title) ' '; */
+  /* --vs-theme--page-top-right-content: counter(vs-counter-chapter) '.' counter(vs-counter-sec-h2); */
+}
+
+.chapter h1::before {
+  content: "****";
 }
 
 /* NOTE: 目次に含まれるh1を消すためのワークアラウンド */
@@ -43,3 +75,41 @@ h1:has(+ #toc) {
 }
 
 /* MEMO: .vivliostyle/themes/packages/@vivliostyle/theme-base/css/partial/toc.css におけるページ番号を出力する方法を参照した。 */
+
+
+/* 奥付 */
+.colophon {
+  --vs-theme--page-top-right-content: '';
+  --vs-theme--page-top-left-content: '';
+  display: grid;
+  grid-template-rows: 1fr auto;
+  min-height: 100vh;
+  /* position: relative;
+  float-reference: page;
+  float: bottom;
+  margin-bottom: 0; */
+}
+
+.colophon ul {
+  padding: 0;
+  list-style: none;
+}
+
+.colophon .title {
+  font-size: 1.5em;
+}
+
+.colophon table {
+  margin: 0;
+  width: 100%;
+  font-size: 100%;
+}
+
+.colophon table tr {
+  border: none;
+}
+
+.colophon table td {
+  vertical-align: top;
+  padding-left: 0;
+}
