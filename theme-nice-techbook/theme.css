@@ -77,7 +77,7 @@ h1:has(+ #toc) {
 }
 
 :is(#toc, [role='doc-toc']) li {
-  margin-top: 2em;
+  margin-top: 1.4em;
   font-weight: 600;
 }
 
@@ -107,12 +107,12 @@ h1:has(+ #toc) {
   list-style: none;
 }
 
-.colophon .title {
+.colophon .colophon-title {
   font-size: 1.5em;
 }
 
 .colophon table {
-  margin: 0;
+  margin: 1em 0;
   width: 100%;
   font-size: 100%;
 }

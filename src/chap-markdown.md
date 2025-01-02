@@ -8,9 +8,7 @@ VivlioStyleではHTMLもしくはMarkdownで原稿を書きます。よほど奇
 
 Markdownとは、元々英語のメールなどテキストコミュニケーションでよく使われる装飾を元に、とても自然な文章っぽく、HTMLの機能の一部を実現できる書式です。とても簡単、かつ様々なところで使われているため是非とも覚えましょう。
 
-この章では、特に断りが無い限りはMarkdownの中でも、VivlioStyleで使用可能なVFM[^VFM]という書式について紹介します。
-
-[^VFM]: Vivlio Fravored Markdownの略で、GitHubで使われるGFMの亜種のようなものです。
+この章では、特に断りが無い限りはMarkdownの中でも、VivlioStyleで使用可能なVFM<span class="footnote">Vivlio Fravored Markdownの略で、GitHubで使われるGFMの亜種のようなものです。</span>という書式について紹介します。
 
 ## これだけ覚えればOK
 
@@ -212,10 +210,10 @@ const hoge = "ほげ"
 Re:VIEW|Re:VIEW専用フォーマット|.re|技術同人誌を書くのに、最も完成されたソフト
 VivlioStyle|Markdown|.md|CSS組版で自由度の高い本を書けるソフト
 
-<a href="#表" data-ref="tbl"></a>
+* <a href="#table" data-ref="tbl"></a>
+* <a href="#table" data-ref="fig"></a>
 
-
-```md:表
+```md:表 {id=table}
 名前|対応書式|拡張子|特徴
 ---|--------|-----|----
 Re:VIEW|Re:VIEW専用フォーマット|.re|技術同人誌を書くのに、最も完成されたソフト
@@ -224,16 +222,11 @@ VivlioStyle|Markdown|.md|CSS組版で自由度の高い本を書けるソフト
 
 ### 脚注
 
-本文とはズレた内容や、リンク先などを脚注に書くことが多いと思います[^footnote]。
-
-[^footnote]: 脚注を読むのが楽しみという人も一定いるかもしれませんが、読まない人も一定数いるのでご注意を。
+本文とはズレた内容や、リンク先などを脚注に書くことが多いと思います<span class="footnote">脚注を読むのが楽しみという人も一定いるかもしれませんが、読まない人も一定数いるのでご注意を。</span>。
 
 ```md:脚注
-本文とはズレた内容や、リンク先などを脚注に書くことが多いと思います[^footnote]。
-
-[^footnote]: 脚注を読むのが楽しみという人も一定いるかもしれませんが、読まない人も一定数いるのでご注意を。
+本文とはズレた内容や、リンク先などを脚注に書くことが多いと思います<span class="footnote">脚注を読むのが楽しみという人も一定いるかもしれませんが、読まない人も一定数いるのでご注意を。</span>。
 ```
-
 
 <div class="column">
 <div class="column-title">歴史</div>
