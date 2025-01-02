@@ -37,3 +37,7 @@ h1:has(+ #toc) {
   display: none;
 }
 
+/* 目次の章番号を表示するためのスタイル */
+:is(#toc, [role='doc-toc']) li > a::before {
+  content: target-counter(attr(href), vs-counter-doc) "章";
+}

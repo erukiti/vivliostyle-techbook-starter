@@ -30,7 +30,7 @@ export default {
 		"chap-toc.md",
 		"chap-mermaid.md",
 		"chap-sample.md",
-
+		"chap-onestop.md",
 		// 後書き
 		"99-postscript.md",
 	],
