@@ -1,3 +1,7 @@
+---
+class: chapter
+---
+
 # Mermaidで図を書く
 
 TBD: テーマと統合

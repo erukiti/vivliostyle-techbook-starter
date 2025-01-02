@@ -1,3 +1,7 @@
+---
+class: chapter
+---
+
 # サンプルと書式
 
 なんか書く[^footnote]。

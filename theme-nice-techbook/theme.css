@@ -16,7 +16,24 @@ pre {
   color: #2c3e50;
 }
 
+/*
+https://gihyo.jp/article/2024/04/vivliostyle-03
+vs-counter-chapterはclass: chapterが定義されているページのみカウントされる
+*/
+:root {
+  --vs-section--h1-marker-content: counter(vs-counter-chapter) "章";
+  --vs-section--h2-marker-content: counter(vs-counter-chapter) '.' counter(vs-counter-sec-h2);
+  --vs-section--h3-marker-content: counter(vs-counter-chapter) '.' counter(vs-counter-sec-h2) . counter(vs-counter-sec-h3);
+}
+
+.chapter {
+  --vs-section--marker-display: inline;
+  /* --vs-section--h1-marker-display: inline;
+  --vs-section--h2-marker-display: inline; */
+}
+
 /* NOTE: 目次に含まれるh1を消すためのワークアラウンド */
 h1:has(+ #toc) {
   display: none;
 }
+

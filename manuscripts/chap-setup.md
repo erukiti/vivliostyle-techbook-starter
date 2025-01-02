@@ -1,3 +1,7 @@
+---
+class: chapter
+---
+
 # セットアップ
 
 ViviloStyleはJavaScriptで書かれたソフトウェアです。そのため、VivlioStyleを使うためにはJavaScript環境を構築する必要があります。JavaScriptを動かすための環境は、普通はNode.jsが使われますが、筆者のおすすめはBunです。
