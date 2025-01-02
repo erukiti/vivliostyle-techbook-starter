@@ -60,7 +60,7 @@ export default {
 			strategy: "img-png",
 			//
 			mermaidConfig: {
-				fontFamily: "'IBM Plex Serif', 'mincho', sans-serif"
+				fontFamily: "'IBM Plex Serif', 'BIZ UD Mincho', sans-serif"
 			}
 		});
 	},
