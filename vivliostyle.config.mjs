@@ -46,7 +46,7 @@ export default {
 	workspaceDir: ".vivliostyle", // directory which is saved intermediate files.
 	toc: {
 		title: "目次", // title of table of contents. default to 'Contents'.
-		maxLevel: 2, // maximum level of headings. default to 3.
+		maxLevel: 3, // maximum level of headings. default to 3.
 		includeCover: false, // include cover page in table of contents. default to 'false'.
 	},
 	// cover: './cover.png', // cover image. default to undefined.
@@ -56,6 +56,12 @@ export default {
 		//   disableFormatHtml: true, // disables HTML formatting. default to 'false'.
 	},
 	documentProcessor: (config, metadata) => {
-		return VFM(config, metadata).use(rehypeMermaid, { strategy: "img-png" });
+		return VFM(config, metadata).use(rehypeMermaid, {
+			strategy: "img-png",
+			//
+			mermaidConfig: {
+				fontFamily: "'IBM Plex Serif', 'mincho', sans-serif"
+			}
+		});
 	},
 };
