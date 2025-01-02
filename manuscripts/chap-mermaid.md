@@ -60,3 +60,6 @@ import rehypeMermaid from "rehype-mermaid";
   },
 ```
 
+## フォントインストールについて書く
+
+TBD: Docker環境だとフォントインストールが必要！
