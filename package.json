@@ -4,7 +4,8 @@
   "version": "0.0.0",
   "author": "erukiti <erukiti+github@gmail.com>",
   "scripts": {
-    "build": "vivliostyle build",
+    "build": "vivliostyle build -o online.pdf",
+    "build:press-ready": "vivliostyle build --press-ready -o press-ready.pdf",
     "preview": "vivliostyle preview"
   },
   "license": "CC0-1.0",

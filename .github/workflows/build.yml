@@ -35,8 +35,11 @@ jobs:
       - name: Install Playwright
         run: bunx playwright install --with-deps
 
-      - name: build book
-        run: bun run build --press-ready
+      - name: build online book
+        run: bun run build
+
+      - name: build press-ready book
+        run: bun run build:press-ready
 
       # PDFのアップロード
       - name: Upload PDF artifacts

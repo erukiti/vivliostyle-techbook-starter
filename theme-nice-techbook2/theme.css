@@ -1,0 +1,268 @@
+/* see. @vivliostyle/theme-base@2.0.0 */
+@import url(theme-base/css/common/meta-properties.css);
+@import url(theme-base/css/common/reset.css);
+@import url(theme-base/css/common/basic.css);
+@import url(theme-base/css/partial/crossref.css);
+/* @import url(theme-base/css/partial/endnote.css); */
+@import url(theme-base/css/partial/footnote.css);
+/* @import url(theme-base/css/partial/footnote-external-link.css); */
+@import url(theme-base/css/partial/page.css);
+@import url(theme-base/css/partial/section.css);
+@import url(theme-base/css/partial/toc.css);
+@import url(theme-base/css/partial/utility-classes.css);
+
+/* see. @vivliostyle/theme-techbook@2.0.0 */
+:root {
+  --vs-font-family: 'Neue Frutiger World', 'Verdana', 'Hiragino Sans',
+    sans-serif;
+  --vs-font-size-on-print: 75%;
+  --vs-line-height: 1.7;
+  --vs-widows-orphans: 3;
+
+  --vs--heading-line-height: 1.2;
+  --vs--monospace-font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono',
+    monospace;
+  --vs--h1-font-size: 2.4em;
+  --vs--h2-font-size: 1.8em;
+  --vs--h3-font-size: 1.4em;
+  --vs--h4-font-size: 1.2em;
+  --vs--h5-font-size: 1em;
+  --vs--h6-font-size: 0.83em;
+  --vs--blockquote-margin-inline: 0;
+  --vs--ul-minimum-inline-indent-size: 1rem;
+  --vs--table-border-width-block-start: 1px;
+  --vs--table-border-width-block-end: 1px;
+  --vs--table-border-width-inline-start: 0;
+  --vs--table-border-width-inline-end: 0;
+  --vs--table-border-width-thead-inner: 1px;
+  --vs--table-border-width-tfoot-inner: 1px;
+  --vs--table-border-width-column: 0;
+  --vs--table-border-width-row: 0.4px;
+  --vs--table-cell-padding-inline: 1rem;
+
+  --vs-footnote--area-before-margin-block: calc(var(--vs-spacing-rlh) * 0.25);
+  --vs-footnote--area-before-margin-inline: 0 70%;
+  --vs-footnote--area-margin-block: var(--vs-spacing-rlh) 0;
+
+  --vs-page--margin-top: 25mm;
+  --vs-page--margin-bottom: 25mm;
+  --vs-page--margin-inner: 22mm;
+  --vs-page--margin-outer: 22mm;
+
+  --vs-prism--inline-code-padding: 0.1em 0.3em;
+  --vs-prism--text-shadow: none;
+}
+
+blockquote {
+  background-color: var(--vs-theme--blockquote-color-bg);
+  border-radius: var(--vs-prism--block-code-border-radius);
+  color: var(--vs-theme--blockquote-color-body);
+  padding: var(--vs-prism--block-code-padding);
+}
+
+blockquote > p:first-child {
+  margin-block-start: unset;
+}
+
+blockquote > p:last-child {
+  margin-block-end: unset;
+}
+
+/*
+ * According to the specification, image-resolution is not applied to vector images,
+ * but Vivliostyle applies it to vector images as well.
+ * We set image-resolution only for images with raster image extensions.
+ * https://docs.vivliostyle.org/#/supported-css-features#css-images-3
+ */
+figure
+  img:is(
+    [src$='.png'],
+    [src$='.jpg'],
+    [src$='.jpeg'],
+    [src$='.gif'],
+    [src$='.webp'],
+    [src$='.apng']
+  ) {
+  --vs--img-image-resolution: var(
+    --vs-theme--image-resolution-for-figure-image
+  );
+}
+
+/* format for inline code */
+:not(pre) > code {
+  --vs-prism--background: var(--vs-theme--inline-code-color-bg);
+  --vs-prism--color: var(--vs-theme--inline-code-color-body);
+}
+
+@media screen {
+  :root {
+    --vs--anchor-color: var(--vs-theme--anchor-color-body);
+    --vs--anchor-text-decoration: none;
+    --vs--anchor-text-decoration-on-hover: underline;
+  }
+
+  body {
+    max-inline-size: 50rem;
+    margin: 2rem auto 2rem;
+    padding: 0 var(--vs-spacing-inline-indent);
+  }
+
+  .footnote {
+    display: block;
+    background-color: var(--vs-theme--footnote-color-bg-on-screen);
+    border-radius: var(--vs-prism--block-code-border-radius);
+    margin-block: var(--vs--blockquote-margin-block);
+    padding: var(--vs-prism--block-code-padding);
+  }
+
+  a[data-ref] {
+    color: var(--vs-theme--crossref-anchor-color-body-on-screen);
+    background-color: var(--vs-theme--crossref-anchor-color-bg-on-screen);
+  }
+}
+
+@page :left {
+  --vs-page--mbox-content-top-left: var(--vs-theme--page-top-left-content);
+  --vs-page--mbox-content-bottom-left: var(--vs-theme--page-bottom-content);
+}
+
+@page :right {
+  --vs-page--mbox-content-top-right: var(--vs-theme--page-top-right-content);
+  --vs-page--mbox-content-bottom-right: var(--vs-theme--page-bottom-content);
+}
+
+#toc,
+nav[role='doc-toc'] {
+  break-before: page;
+  font-size: 120%;
+}
+
+
+
+pre {
+  width: 100%;
+}
+
+.column {
+  margin: 2rem 0;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.column-title {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.column-title::before {
+  content: "■コラム";
+  margin-right: 0.5rem;
+}
+
+.flush-right {
+  text-align: right;
+}
+
+/*
+https://gihyo.jp/article/2024/04/vivliostyle-03
+vs-counter-chapterはclass: chapterが定義されているページのみカウントされる
+*/
+:root {
+  /* 本文フォント */
+  --vs-font-family: 'IBM Plex Serif', 'mincho', sans-serif;
+  /* 等幅フォント（コードブロックで利用される）のフォント */
+
+  --vs--monospace-font-family: 'Cas Mono', 'gothic';
+  --vs--monospace-font-size: 0.9em;
+  --vs--monospace-line-height: 1.4;
+
+  /* 見出し */
+  --vs--h1-text-align: right;
+
+  --vs--heading-line-height: 1.2;
+  --vs-section--h1-marker-content: counter(vs-counter-chapter) "章";
+  --vs-section--h2-marker-content: counter(vs-counter-chapter) '.' counter(vs-counter-sec-h2);
+  --vs-section--h3-marker-content: counter(vs-counter-chapter) '.' counter(vs-counter-sec-h2) '.' counter(vs-counter-sec-h3);
+  --vs--heading-font-family: sans-serif;
+  --vs--heading-font-weight: 800;
+
+  /* 目次 */
+  --vs-toc--page-leader-content: leader(' ');
+}
+
+/* まえがき・あとがきなどを除外するため。
+ * 本文用のクラス定義をしている。FrontMatterでclass: chapterを指定すること。
+ */
+.chapter {
+  --vs-section--marker-display: inline;
+
+  /* margin box に番号を付与する */
+  --vs-theme--page-top-right-content: '第' counter(vs-counter-chapter) '章' env(doc-title) ' ';
+  /* --vs-theme--page-top-left-content: '第' counter(vs-counter-chapter) '章' env(doc-title) ' '; */
+  /* --vs-theme--page-top-right-content: counter(vs-counter-chapter) '.' counter(vs-counter-sec-h2); */
+}
+
+/* NOTE: 目次に含まれるh1を消すためのワークアラウンド */
+h1:has(+ #toc) {
+  display: none;
+}
+
+/* 目次の章番号を表示するためのスタイル */
+:is(#toc, [role='doc-toc']) li > a::before {
+  content: "第" target-counter(attr(href), vs-counter-chapter) "章 ";
+}
+
+:is(#toc, [role='doc-toc']) li ol li > a::before {
+  content: target-counter(attr(href), vs-counter-chapter) "." target-counter(attr(href), vs-counter-sec-h2) " ";
+}
+
+:is(#toc, [role='doc-toc']) li {
+  margin-top: 1.4em;
+  font-weight: 600;
+}
+
+:is(#toc, [role='doc-toc']) li ol li {
+  margin-left: -1em;
+  margin-top: 0em;
+  --vs-toc--page-leader-content: leader('．');
+  font-weight: 500;
+}
+
+
+/* 奥付 */
+.colophon {
+  --vs-theme--page-top-right-content: '';
+  --vs-theme--page-top-left-content: '';
+  display: grid;
+  grid-template-rows: 1fr auto;
+  min-height: 100vh;
+  /* position: relative;
+  float-reference: page;
+  float: bottom;
+  margin-bottom: 0; */
+}
+
+.colophon ul {
+  padding: 0;
+  list-style: none;
+}
+
+.colophon .colophon-title {
+  font-size: 1.5em;
+}
+
+.colophon table {
+  margin: 1em 0;
+  width: 100%;
+  font-size: 100%;
+}
+
+.colophon table tr {
+  border: none;
+}
+
+.colophon table td {
+  vertical-align: top;
+  padding-left: 0;
+}
