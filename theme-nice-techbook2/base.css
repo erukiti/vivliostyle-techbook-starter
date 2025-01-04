@@ -31,7 +31,6 @@
   --vs-prism--color-tag: var(--vs-prism--color);
   --vs-prism--color-url: var(--vs-prism--color);
   --vs-prism--color-variable: var(--vs-prism--color);
-  --vs-prism--text-shadow: none;
 
   --vs-prism--block-code-border-radius: 0.3em;
   --vs-prism--block-code-padding: 1em;
@@ -43,7 +42,7 @@ code,
 pre[class*='language-'] {
   color: var(--vs-prism--color);
   background: none;
-  text-shadow: var(--vs-prism--text-shadow);
+  text-shadow: none;
   text-align: left;
   white-space: pre;
   word-spacing: normal;
