@@ -172,7 +172,7 @@ vs-counter-chapterはclass: chapterが定義されているページのみカウ
 */
 :root {
   /* 本文フォント */
-  --vs-font-family: 'IBM Plex Serif', 'mincho', sans-serif;
+  --vs-font-family: 'IBM Plex Serif', 'mincho';
   /* 等幅フォント（コードブロックで利用される）のフォント */
 
   --vs--monospace-font-family: 'Cas Mono', 'gothic';
@@ -186,8 +186,8 @@ vs-counter-chapterはclass: chapterが定義されているページのみカウ
   --vs-section--h1-marker-content: '第' counter(vs-counter-chapter) '章';
   --vs-section--h2-marker-content: counter(vs-counter-chapter) '.' counter(vs-counter-sec-h2);
   --vs-section--h3-marker-content: counter(vs-counter-chapter) '.' counter(vs-counter-sec-h2) '.' counter(vs-counter-sec-h3);
-  --vs--heading-font-family: sans-serif;
-  --vs--heading-font-weight: 800;
+  --vs--heading-font-family: 'IBM Plex Sans', 'gothic';
+  --vs--heading-font-weight: 700;
 
   /* 目次 */
   --vs-toc--page-leader-content: leader(' ');

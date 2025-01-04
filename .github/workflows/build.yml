@@ -29,7 +29,9 @@ jobs:
           sudo wget https://github.com/googlefonts/morisawa-biz-ud-mincho/releases/download/v1.06/BIZUDMincho-Bold.ttf -P /usr/share/fonts/truetype/
           sudo chmod 644 /usr/share/fonts/truetype/BIZUDGothic-*.ttf
           sudo fc-cache -fv
+          # List installed fonts without failing if grep finds nothing
           fc-list | grep -i "biz" || true
+          # Verify files exist
           ls -l /usr/share/fonts/truetype/BIZUDGothic-*.ttf
 
       - name: Install Playwright
@@ -38,22 +40,17 @@ jobs:
       - name: remove wqy-zenhei fonts
         run: |
           sudo apt-get purge -y fonts-wqy-zenhei
-          sudo rm -rf /var/lib/apt/lists/*
 
       - name: build online book
         run: bun run build
 
       - name: install press-ready dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y software-properties-common
-          sudo add-apt-repository universe
-          sudo apt-get update
-          sudo apt-get install -y ghostscript poppler-utils
+        run: sudo apt-get install -y ghostscript poppler-utils
 
       - name: build press-ready book
         run: bun run build:press-ready --preflight press-ready-local
 
+      # PDFのアップロード
       - name: Upload PDF artifacts
         uses: actions/upload-artifact@v3
         with:
@@ -61,6 +58,7 @@ jobs:
           path: ./*.pdf
           retention-days: 3
 
+      # Playwrightレポートのアップロード
       - name: Upload Playwright report
         uses: actions/upload-artifact@v4
         if: always()
