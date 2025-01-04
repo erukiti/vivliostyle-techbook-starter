@@ -18,6 +18,7 @@
   --vs-font-size-on-print: 75%;
   --vs-line-height: 1.7;
   --vs-widows-orphans: 3;
+  --vs--p-text-indent: 1em;
 
   --vs--heading-line-height: 1.2;
   --vs--monospace-font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono',
@@ -231,7 +232,6 @@ h1:has(+ #toc) {
   --vs-toc--page-leader-content: leader('．');
   font-weight: 500;
 }
-
 
 /* 奥付 */
 .colophon {

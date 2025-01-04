@@ -21,6 +21,7 @@ Markdownとは、元々英語のメールなどテキストコミュニケーシ
 * コードブロック
 * 表
 * 脚注
+* 画像
 
 ### 文
 
@@ -242,3 +243,11 @@ GitHub, Notion, Confluence他、様々なシェアトップのツールが、Mar
 これはWikiと同じ悪夢を生み出すかと思われましたが、GitHubという巨大勢力によりGitHub Flavored Markdownが、ほぼ業界標準になっています。
 
 </div>
+
+### 画像
+
+![横長サイズのぺんぎんの画像](images/penguin-big.webp)
+
+![小さいサイズのぺんぎんの画像](images/penguin-small.webp)
+
+![筆者のアイコン画像](images/erukiti-icon.png)
