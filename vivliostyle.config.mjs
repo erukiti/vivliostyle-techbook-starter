@@ -36,6 +36,7 @@ const def = {
     "chap-onestop.md",
     // 後書き
     "90-postscript.md",
+    "98-authors.md",
     "99-colophon.md",
   ],
   entryContext: "./src",

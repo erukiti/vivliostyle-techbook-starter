@@ -141,7 +141,9 @@ nav[role='doc-toc'] {
   font-size: 120%;
 }
 
-
+code {
+  text-shadow: none;
+}
 
 pre {
   width: 100%;
@@ -271,4 +273,21 @@ h1:has(+ #toc) {
 .colophon table td {
   vertical-align: top;
   padding-left: 0;
+}
+
+.author h2 {
+  margin: 2rem 0;
+}
+
+div.author-profile {
+  display: grid;
+  grid-template-columns: 45px 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+div.author-profile img {
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
 }
