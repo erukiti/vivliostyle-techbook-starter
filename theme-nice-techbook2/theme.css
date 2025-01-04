@@ -291,3 +291,48 @@ div.author-profile img {
 code {
   text-shadow: none !important;
 }
+
+/** いわゆる扉ページ（最上部にタイトル。下に発行履歴など */
+.title {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  --vs-theme--page-top-left-content: '';
+  --vs-theme--page-top-right-content: '';
+}
+
+/** タイトル */
+.title h1 {
+  margin: 0;
+  font-size: 1.75em;
+  font-weight: bold;
+  text-align: center;
+}
+
+/** 発行履歴 */
+.title .footer {
+  margin-top: auto;
+  text-align: center;
+  font-size: 1em;
+}
+
+.title .footer ul {
+  padding: 0;
+  list-style: none;
+}
+
+/** 第一部、第二部などのページ */
+.part {
+  min-height: 100vh;
+  --vs-theme--page-top-left-content: '';
+  --vs-theme--page-top-right-content: '';
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.part h1::before {
+  content: '第' counter(vs-counter-part) '部';
+  margin-right: 0.5em;
+}

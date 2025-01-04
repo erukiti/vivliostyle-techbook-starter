@@ -11,7 +11,6 @@ const def = {
   language: "ja", // default to undefined.
   size: "JIS-B5", // A4: 教科書サイズ、JIS-B5: 最近流行りの小さいサイズの技術書
   theme: [
-    // "@vivliostyle/theme-techbook@^2.0.0", // .css or local dir or npm package. default to undefined.
     "./fonts",
     "./theme-nice-techbook2",
   ],
@@ -19,21 +18,28 @@ const def = {
     // 表紙
     // { rel: "cover" },
 
+    // 扉
+    "00-title.md",
     // 前書き
-    "00-preface.md",
+    "01-preface.md",
 
     // 目次
     { rel: "contents" },
 
-    // 本文
+    // 第一部 とにかく楽をする
+    "part-easy.md",
     "chap-setup.md",
     "chap-markdown.md",
+    "chap-sample.md",
+    "chap-onestop.md",
+
+    // 第二部 VivliostyleのTips
+    "part-tips.md",
     "chap-theme.md",
     "chap-font.md",
     "chap-toc.md",
     "chap-mermaid.md",
-    "chap-sample.md",
-    "chap-onestop.md",
+
     // 後書き
     "90-postscript.md",
     "98-authors.md",
