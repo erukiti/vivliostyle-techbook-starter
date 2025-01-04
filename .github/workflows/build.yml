@@ -15,9 +15,6 @@ jobs:
       - name: Install dependencies
         run: bun install
 
-      - name: remove fonts
-        run: sudo apt-get remove -y wqy-zenhei-font-ttf
-
       - name: Install IBM Plex Sans
         run: |
           sudo apt-get update
@@ -39,6 +36,11 @@ jobs:
 
       - name: Install Playwright
         run: bunx playwright install --with-deps chromium
+
+      - name: remove wqy-zenhei fonts
+        run: apt-get purge -y fonts-wqy-zenhei && \
+          apt-get clean && \
+          rm -rf /var/lib/apt/lists/*
 
       - name: build online book
         run: bun run build
