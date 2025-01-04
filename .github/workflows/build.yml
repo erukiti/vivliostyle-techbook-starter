@@ -35,7 +35,8 @@ jobs:
           ls -l /usr/share/fonts/truetype/BIZUDGothic-*.ttf
 
       - name: Install Playwright
-        run: bunx playwright install --with-deps chromium
+        # run: bunx playwright install --with-deps chromium
+        run: bunx playwright install chromium
 
       - name: remove wqy-zenhei fonts
         run: |
