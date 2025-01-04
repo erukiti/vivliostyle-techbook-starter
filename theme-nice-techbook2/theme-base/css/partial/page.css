@@ -599,3 +599,9 @@ body.prologue,
 [role='doc-prologue'] {
   page: prologue;
 }
+
+html.title,
+body.title,
+[role='doc-title'] {
+  page: title;
+}

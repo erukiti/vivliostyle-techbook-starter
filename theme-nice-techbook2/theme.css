@@ -180,8 +180,6 @@ vs-counter-chapterはclass: chapterが定義されているページのみカウ
   --vs--monospace-line-height: 1.4;
 
   /* 見出し */
-  --vs--h1-text-align: right;
-
   --vs--heading-line-height: 1.2;
   --vs-section--h1-marker-content: '第' counter(vs-counter-chapter) '章';
   --vs-section--h2-marker-content: counter(vs-counter-chapter) '.' counter(vs-counter-sec-h2);
@@ -234,10 +232,14 @@ h1:has(+ #toc) {
   font-weight: 500;
 }
 
+/* なぜか効かない */
+body:has(+ #toc, [role='doc-toc']) {
+  --vs-page--mbox-visibility: hidden;
+}
+
 /* 奥付 */
 .colophon {
-  --vs-theme--page-top-right-content: '';
-  --vs-theme--page-top-left-content: '';
+  --vs-page--mbox-visibility: hidden;
   display: grid;
   grid-template-rows: 1fr auto;
   min-height: 100vh;
@@ -271,6 +273,10 @@ h1:has(+ #toc) {
   padding-left: 0;
 }
 
+.author {
+  --vs-page--mbox-visibility: hidden;
+}
+
 .author h2 {
   margin: 2rem 0;
 }
@@ -297,8 +303,7 @@ code {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  --vs-theme--page-top-left-content: '';
-  --vs-theme--page-top-right-content: '';
+  --vs-page--mbox-visibility: hidden;
 }
 
 /** タイトル */
@@ -324,8 +329,7 @@ code {
 /** 第一部、第二部などのページ */
 .part {
   min-height: 100vh;
-  --vs-theme--page-top-left-content: '';
-  --vs-theme--page-top-right-content: '';
+  --vs-page--mbox-visibility: hidden;
   min-height: 100vh;
   display: flex;
   justify-content: center;
