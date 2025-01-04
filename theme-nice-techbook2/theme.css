@@ -52,8 +52,8 @@
   --vs-prism--inline-code-padding: 0.1em 0.3em;
   --vs-prism--text-shadow: none;
 
-  --vs--h2-margin-block: 1.5em -0.2em;
-  --vs--h3-margin-block: 1.5em -0.2em;
+  --vs--h2-margin-block: 2em -0.2em;
+  --vs--h3-margin-block: 2em -0.2em;
 }
 
 blockquote {
