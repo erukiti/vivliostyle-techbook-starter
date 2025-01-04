@@ -38,9 +38,9 @@ jobs:
         run: bunx playwright install --with-deps chromium
 
       - name: remove wqy-zenhei fonts
-        run: apt-get purge -y fonts-wqy-zenhei && \
-          apt-get clean && \
-          rm -rf /var/lib/apt/lists/*
+        run: sudo apt-get purge -y fonts-wqy-zenhei && \
+          sudo apt-get clean && \
+          sudo rm -rf /var/lib/apt/lists/*
 
       - name: build online book
         run: bun run build
