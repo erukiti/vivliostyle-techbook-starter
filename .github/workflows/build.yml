@@ -16,7 +16,7 @@ jobs:
         run: bun install
 
       - name: remove fonts
-        run: sudo apt-get remove -y WenQuanYiZenHei
+        run: sudo apt-get remove -y wqy-zenhei-font-ttf
 
       - name: Install IBM Plex Sans
         run: |
