@@ -5,11 +5,11 @@
   --vs-footnote--call-margin-inline: 0;
   --vs-footnote--call-inset-block-start: var(--vs--sup-inset-block-start);
   --vs-footnote--counter-style: decimal;
-  --vs-footnote--marker-content: counter(
+  --vs-footnote--marker-content: '*'counter(
       vs-counter-footnote,
       var(--vs-footnote--counter-style)
     )
-    '. ';
+    ' ';
   --vs-footnote--marker-margin-inline: 0;
   --vs-footnote--area-margin-block: var(--vs-spacing-rlh);
   --vs-footnote--area-before-display: block;
@@ -65,6 +65,9 @@
 [role='doc-footnote']::footnote-marker {
   content: var(--vs-footnote--marker-content);
   margin-inline: var(--vs-footnote--marker-margin-inline);
+  font-size: var(--vs-footnote--call-font-size);
+  position: relative;
+  inset-block-start: var(--vs-footnote--call-inset-block-start);
 }
 
 @media print {

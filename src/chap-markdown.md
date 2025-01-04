@@ -248,6 +248,40 @@ GitHub, Notion, Confluence他、様々なシェアトップのツールが、Mar
 
 ![横長サイズのぺんぎんの画像](images/penguin-big.webp)
 
-![小さいサイズのぺんぎんの画像](images/penguin-small.webp)
+```md
+![横長サイズのぺんぎんの画像](images/penguin-big.webp)
+```
 
+![筆者のアイコン画像](images/erukiti-icon.png){id=erukiti-icon}
+
+```
 ![筆者のアイコン画像](images/erukiti-icon.png)
+```
+
+文章中に筆者のアイコン画像を16px指定で![筆者のアイコン画像](images/erukiti-icon.png){width=16px}を出したら。
+
+```md
+文章中に筆者のアイコン画像を16px指定で![筆者のアイコン画像](images/erukiti-icon.png){width=16px}を出したら。
+```
+
+![筆者のアイコン画像を横100%に引き延ばした](images/erukiti-icon.png){width=100%}
+
+```
+![筆者のアイコン画像](images/erukiti-icon.png){width=100%}
+```
+
+
+### 相互参照
+
+筆者のアイコンは<a href="#erukiti-icon" data-ref="fig"></a>です。
+
+
+
+
+### ルビ
+
+{五帝|オーバーエレメント}という感じでルビを振ることができる。
+
+```md
+{五帝|オーバーエレメント}という感じでルビを振ることができる。
+```

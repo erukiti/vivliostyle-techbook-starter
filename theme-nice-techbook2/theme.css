@@ -185,7 +185,7 @@ vs-counter-chapterはclass: chapterが定義されているページのみカウ
   --vs--h1-text-align: right;
 
   --vs--heading-line-height: 1.2;
-  --vs-section--h1-marker-content: counter(vs-counter-chapter) "章";
+  --vs-section--h1-marker-content: '第' counter(vs-counter-chapter) '章';
   --vs-section--h2-marker-content: counter(vs-counter-chapter) '.' counter(vs-counter-sec-h2);
   --vs-section--h3-marker-content: counter(vs-counter-chapter) '.' counter(vs-counter-sec-h2) '.' counter(vs-counter-sec-h3);
   --vs--heading-font-family: sans-serif;
@@ -193,6 +193,9 @@ vs-counter-chapterはclass: chapterが定義されているページのみカウ
 
   /* 目次 */
   --vs-toc--page-leader-content: leader(' ');
+
+
+  --vs-footnote--font-size: 0.85em;
 }
 
 /* まえがき・あとがきなどを除外するため。
