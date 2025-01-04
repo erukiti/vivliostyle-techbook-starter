@@ -38,8 +38,11 @@ jobs:
       - name: build online book
         run: bun run build
 
+      - name: install press-ready dependencies
+        run: apk add ghostscript poppler-utils
+
       - name: build press-ready book
-        run: bun run build:press-ready
+        run: bun run build:press-ready --preflight press-ready-local
 
       # PDFのアップロード
       - name: Upload PDF artifacts
