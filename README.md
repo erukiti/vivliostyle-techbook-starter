@@ -18,8 +18,14 @@ bun i
 
 ## 本を作成
 
-```sh
+本を作成するコマンドは `bun run build` と `bun run build:press-ready` です。
+
+```sh:オンラインで使う前提のカラーPDFを作成するコマンド
 bun run build
+```
+
+```sh:印刷対応の、なるべく白黒に寄せたPDFを作成するコマンド
+bun run build:press-ready
 ```
 
 ## プレビュー
