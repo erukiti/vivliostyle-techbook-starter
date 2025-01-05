@@ -34,6 +34,7 @@ const def = {
 
     // 第二部 VivliostyleのTips
     "part-tips.md",
+    "chap-vivliostyle.md",
     "chap-theme.md",
     "chap-font.md",
     "chap-toc.md",
