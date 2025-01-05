@@ -51,6 +51,9 @@
 
   --vs--h2-margin-block: 2em -0.2em;
   --vs--h3-margin-block: 2em -0.2em;
+
+/* --vs--figure-item-padding-inline: 0; */
+  /* --vs--figure-margin-block: 4em; */
 }
 
 blockquote {
@@ -340,3 +343,4 @@ code {
   content: '第' counter(vs-counter-part) '部';
   margin-right: 0.5em;
 }
+

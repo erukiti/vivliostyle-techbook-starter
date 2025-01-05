@@ -153,19 +153,27 @@ Markdownにおける文は、
 
 コードブロックとは、ソースコードの提示などに使います。
 
-```ts
+```ts id=code-block
 // TypeScript
 const hoge = "ほげ"
 ```
 
-````md:コードブロック
+````md:コードブロックの書き方
 コードブロックとは、ソースコードの提示などに使います。
 
-```ts
+```ts id=code-block
 // TypeScript
 const hoge = "ほげ"
 ```
 ````
+
+コードブロックを<a href="#code-block" data-ref="fig"></a>という風に参照できます。
+
+```md
+コードブロックを<a href="#code-block" data-ref="figure"></a>という風に参照できます。
+```
+
+
 
 ちなみにコードブロックの中でコードブロックを書きたい場合は、外側のコードブロックのバッククォートの数を増やしましょう。
 
@@ -210,10 +218,7 @@ const hoge = "ほげ"
 Re:VIEW|Re:VIEW専用フォーマット|.re|技術同人誌を書くのに、最も完成されたソフト
 VivlioStyle|Markdown|.md|CSS組版で自由度の高い本を書けるソフト
 
-* <a href="#table" data-ref="tbl"></a>
-* <a href="#table" data-ref="fig"></a>
-
-```md:表 {id=table}
+```md:表
 名前|対応書式|拡張子|特徴
 ---|--------|-----|----
 Re:VIEW|Re:VIEW専用フォーマット|.re|技術同人誌を書くのに、最も完成されたソフト

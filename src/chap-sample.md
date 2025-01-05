@@ -23,9 +23,20 @@ pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
 culpa qui officia deserunt mollit anim id est laborum.
 
 
+![筆者のアイコン画像](images/erukiti-icon.png){id=erukiti-icon2}
+
+筆者のアイコンは<a href="#erukiti-icon2" data-ref="fig"></a>です。
+
+```md
+筆者のアイコンは<a href="#erukiti-icon" data-ref="fig"></a>です。
+```
+
+図の番号はchapterごとに途切れる！！！！
 
 
-```ts
+
+
+```ts:sample-source
 // 日本語コメントalphabet
 export type Hoge = {
     hoge: string
@@ -40,6 +51,8 @@ export const func = (): Hoge => {
     }
 }
 ```
+
+* <a href="#sample-source" data-ref="fig"></a>
 
 * アルファベット(alphabet)混じり。`Alphabet`
 * アルファベット（alphabet）混じり。`Alphabet`
