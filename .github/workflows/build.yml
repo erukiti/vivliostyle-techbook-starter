@@ -21,18 +21,20 @@ jobs:
           sudo apt-get install -y fonts-ibm-plex
           fc-list | grep -i "ibm plex"
 
+      - name: Install Harano Aji Gothic
+        run: |
+          cp ./fonts/HaranoAjiGothic-*.otf /usr/share/fonts/
+
       - name: Install BIZ UD Gothic/Mincho
         run: |
-          sudo wget https://github.com/googlefonts/morisawa-biz-ud-gothic/releases/download/v1.05/BIZUDGothic-Regular.ttf -P /usr/share/fonts/truetype/
-          sudo wget https://github.com/googlefonts/morisawa-biz-ud-gothic/releases/download/v1.05/BIZUDGothic-Bold.ttf -P /usr/share/fonts/truetype/
           sudo wget https://github.com/googlefonts/morisawa-biz-ud-mincho/releases/download/v1.06/BIZUDMincho-Regular.ttf -P /usr/share/fonts/truetype/
           sudo wget https://github.com/googlefonts/morisawa-biz-ud-mincho/releases/download/v1.06/BIZUDMincho-Bold.ttf -P /usr/share/fonts/truetype/
-          sudo chmod 644 /usr/share/fonts/truetype/BIZUDGothic-*.ttf
-          sudo fc-cache -fv
-          # List installed fonts without failing if grep finds nothing
+
+      - name: Check installed fonts
+        run: |
+          fc-cache -fv
+          fc-list | grep -i "harano" || true
           fc-list | grep -i "biz" || true
-          # Verify files exist
-          ls -l /usr/share/fonts/truetype/BIZUDGothic-*.ttf
 
       - name: Install Playwright
         # run: bunx playwright install --with-deps chromium
