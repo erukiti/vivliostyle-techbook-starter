@@ -98,7 +98,34 @@ drwxr-xr-x  477 erukiti  staff   15264 12 23 15:39 node_modules
 
 です。
 
+<div class="column">
+<div class="column-title">Windowsでビルドできるまで</div>
 
+
+<div class="flush-right">おやかた@oyakata2438</div>
+
+Windows環境で、この原稿をローカルでビルドできるようになるまでにインストールしたパッケージは以下の通り。
+
+
+* Vivliostyle
+* BUN
+* Node.js
+* VFM
+* Playwright
+
+```sh
+> npm install -g @vivliostyle/cli
+> powershell -c "irm bun.sh/install.ps1 | iex"
+> Node.jsはhttps://nodejs.org/en/download にインストーラーがある。
+> bun install @vivliostyle/vfm
+> npx playwright install
+```
+
+ビルドコマンド:
+> bun run build
+
+環境にもよるし、これから変わるかも…だけど、備忘録として。
+</div>
 
 
 
