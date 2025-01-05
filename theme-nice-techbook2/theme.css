@@ -240,41 +240,7 @@ body:has(+ #toc, [role='doc-toc']) {
   --vs-page--mbox-visibility: hidden;
 }
 
-/* 奥付 */
-.colophon {
-  --vs-page--mbox-visibility: hidden;
-  display: grid;
-  grid-template-rows: 1fr auto;
-  min-height: 100vh;
-  /* position: relative;
-  float-reference: page;
-  float: bottom;
-  margin-bottom: 0; */
-}
-
-.colophon ul {
-  padding: 0;
-  list-style: none;
-}
-
-.colophon .colophon-title {
-  font-size: 1.5em;
-}
-
-.colophon table {
-  margin: 1em 0;
-  width: 100%;
-  font-size: 100%;
-}
-
-.colophon table tr {
-  border: none;
-}
-
-.colophon table td {
-  vertical-align: top;
-  padding-left: 0;
-}
+@import url(./colophon.css);
 
 .author {
   --vs-page--mbox-visibility: hidden;
