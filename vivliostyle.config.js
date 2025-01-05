@@ -38,6 +38,7 @@ const def = {
     "chap-font.md",
     "chap-toc.md",
     "chap-mermaid.md",
+    "chap-markdown-extra.md",
     "chap-sample.md",
 
     // 後書き
