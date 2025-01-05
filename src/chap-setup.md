@@ -194,6 +194,7 @@ module.exports = {
 # VivlioStyle
 
 .vivliostyle
+/*.pdf
 ```
 
 を追加しておきましょう。

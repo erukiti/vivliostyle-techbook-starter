@@ -28,8 +28,9 @@ const def = {
     "part-easy.md",
     "chap-setup.md",
     "chap-markdown.md",
-    "chap-sample.md",
+    "chap-build.md",
     "chap-onestop.md",
+
 
     // 第二部 VivliostyleのTips
     "part-tips.md",
@@ -37,6 +38,7 @@ const def = {
     "chap-font.md",
     "chap-toc.md",
     "chap-mermaid.md",
+    "chap-sample.md",
 
     // 後書き
     "90-postscript.md",
