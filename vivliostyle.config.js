@@ -1,8 +1,6 @@
 import { VFM } from "@vivliostyle/vfm";
 import rehypeMermaid from "rehype-mermaid";
 
-console.log(process.argv);
-
 const isPressReady = process.argv.includes("--press-ready");
 
 const def = {

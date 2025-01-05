@@ -9,9 +9,8 @@
     "build:press-ready": "vivliostyle build --press-ready -o press-ready.pdf",
     "preview": "vivliostyle preview"
   },
-  "license": "CC0-1.0",
   "dependencies": {
-    "@vivliostyle/cli": "latest",
+    "@vivliostyle/cli": "^8.17.1",
     "playwright": "^1.49.1",
     "rehype-mermaid": "^3.0.0"
   },

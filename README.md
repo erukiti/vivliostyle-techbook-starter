@@ -6,9 +6,7 @@
 
 ## 前提
 
-* [Bun](https://bun.sh/)
-
-別にNode.jsでもいいけどBunが楽
+* [Node.js](https://nodejs.org/en/)
 
 ## install
 
