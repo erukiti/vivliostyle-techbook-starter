@@ -38,9 +38,9 @@ fork画面では、誰のリポジトリにしたいのかオーナーを選び�
 
 ### 確認する
 
-さて、この状態だと、今あなたが手に取っている本の内容そのものがPDFとして生成されるようになっています。
+ここまでの作業で、今あなたが手に取っている本の内容そのものがPDFとして生成されるようになっています。
 
-まずはローカルでPDFが構築できるか確認してみましょう。たとえば、リポジトリは `git@github.com:erukiti/sample1.git` だとします（このリポジトリは存在しません）。
+まずはローカルで実際にPDFが構築できるか確認してみましょう。たとえば、リポジトリは `git@github.com:erukiti/sample1.git` だとします（このリポジトリは存在しません）。
 
 ```sh
 % git clone git@github.com:erukiti/sample1.git
@@ -74,7 +74,9 @@ To address all issues (including breaking changes), run:
 Run `npm audit` for details.
 ```
 
-色々警告が出ますが、いったんそういうものとしてください。これが完了するとPDF生成するための準備ができました。
+`sample1`ディレクトリに移動し `npm i` でVivlioStyleを動かすのに必要なパッケージをインストールします。色々警告が出ますが、いったんそういうものとしてください。これが完了するとPDF生成するための準備ができました。
+
+`npm run build` コマンドで電子版PDFが作成できました。
 
 ```sh
 % npm run build
@@ -128,3 +130,8 @@ VivlioStyleでは、本のタイトル、本のサイズ、原稿ファイル名
 ### それぞれの原稿ファイルについて軽く見ていく
 
 TBD
+
+### CIでPDFが自動生成されているか確認する
+
+TBD
+
