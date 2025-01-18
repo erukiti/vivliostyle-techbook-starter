@@ -27,10 +27,10 @@ const def = {
     // 第一部 とにかく楽をする
     "part-easy.md",
     "chap-setup.md",
+    "chap-howto.md",
     "chap-markdown.md",
     "chap-build.md",
     "chap-onestop.md",
-
 
     // 第二部 VivliostyleのTips
     "part-tips.md",
