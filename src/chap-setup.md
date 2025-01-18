@@ -4,8 +4,6 @@ class: chapter
 
 # セットアップ
 
-<div class="flush-right">@erukiti</div>
-
 ViviloStyleはJavaScriptで書かれたソフトウェアです。そのため、Vivliostyleを使うためにはJavaScript環境を構築する必要があります。JavaScriptを動かすためにNode.jsが必要です。
 
 ## システムにNode.jsをインストールする
