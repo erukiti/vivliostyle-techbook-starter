@@ -137,7 +137,11 @@ figure
 #toc,
 nav[role='doc-toc'] {
   break-before: page;
-  font-size: 120%;
+  font-size: 100%;
+}
+
+#toc li[data-section-level='1'] > span, #toc li[data-section-level='1'] > a {
+  font-family: var(--vs--heading-font-family);
 }
 
 code {
@@ -216,11 +220,13 @@ h1:has(+ #toc) {
 
 /* 目次の章番号を表示するためのスタイル */
 :is(#toc, [role='doc-toc']) li > a::before {
-  content: "第" target-counter(attr(href), vs-counter-chapter) "章 ";
+  content: "第" target-counter(attr(href), vs-counter-chapter) "章";
+  margin-right: 1em;
 }
 
 :is(#toc, [role='doc-toc']) li ol li > a::before {
-  content: target-counter(attr(href), vs-counter-chapter) "." target-counter(attr(href), vs-counter-sec-h2) " ";
+  content: target-counter(attr(href), vs-counter-chapter) "." target-counter(attr(href), vs-counter-sec-h2);
+  margin-right: 1em;
 }
 
 :is(#toc, [role='doc-toc']) li {
