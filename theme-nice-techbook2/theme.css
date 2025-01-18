@@ -142,6 +142,7 @@ figure
 }
 
 @page :left {
+  --vs-theme--page-top-left-content: '第' counter(vs-counter-chapter) '章 ' env(doc-title);
   --vs-page--mbox-content-top-left: var(--vs-theme--page-top-left-content);
   --vs-page--mbox-content-bottom-left: var(--vs-theme--page-bottom-content);
 }
@@ -215,6 +216,7 @@ vs-counter-chapterはclass: chapterが定義されているページのみカウ
   --vs--monospace-font-family: 'Cas Mono', 'gothic';
   --vs--monospace-font-size: 0.9em;
   --vs--monospace-line-height: 1.4;
+  --vs-page--mbox-font-family: var(--vs--heading-font-family);
 
   /* 見出し */
   --vs--heading-line-height: 1.2;
@@ -247,6 +249,16 @@ vs-counter-chapterはclass: chapterが定義されているページのみカウ
   display: block;
   font-size: 75%;
   margin-bottom: calc(var(--vs-spacing-rlh) / 2);
+}
+
+/* 右側ページの上部には現在のh2セクションの内容を表示する */
+/* FIXME: ここに vs-counter-chapter の取得を試みても表示されないので、章が始まるページで「2.」といった内容になってしまう */
+.chapter h2 {
+  string-set: section-h2-title counter(vs-counter-sec-h2) ' ' content();
+}
+
+@page :right {
+  --vs-theme--page-top-right-content: counter(vs-counter-chapter) '.' string(section-h2-title, start);
 }
 
 /* NOTE: 目次に含まれるh1を消すためのワークアラウンド */
