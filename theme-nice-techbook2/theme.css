@@ -71,6 +71,23 @@ blockquote > p:last-child {
   margin-block-end: unset;
 }
 
+figure > figcaption {
+  font-family: var(--vs--heading-font-family);
+}
+/* for codeblock */
+figure > figcaption:first-child {
+  margin: 0;
+}
+/* for image */
+figure > figcaption:last-child {
+  margin-block-start: calc(var(--vs-spacing-rlh) / 2);
+  margin-block-end: 0;
+}
+figure > pre {
+  margin-block-start: calc(var(--vs-spacing-rlh) / 2);
+  margin-block-end: 0;
+}
+
 /*
  * According to the specification, image-resolution is not applied to vector images,
  * but Vivliostyle applies it to vector images as well.
@@ -196,7 +213,7 @@ vs-counter-chapterはclass: chapterが定義されているページのみカウ
   --vs-section--h1-marker-content: '第' counter(vs-counter-chapter) '章';
   --vs-section--h2-marker-content: counter(vs-counter-chapter) '.' counter(vs-counter-sec-h2);
   --vs-section--h3-marker-content: counter(vs-counter-chapter) '.' counter(vs-counter-sec-h2) '.' counter(vs-counter-sec-h3);
-  --vs--heading-font-family: 'IBM Plex Sans', 'gothic';
+  --vs--heading-font-family: 'gothic';
   --vs--heading-font-weight: 700;
 
   /* 目次 */
