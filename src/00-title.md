@@ -3,7 +3,7 @@ class: title
 ---
 
 <!-- なぜか # で書くとレイアウトに失敗する -->
-<h1>とにかく楽にMarkdownで本を作りたい！</h1>
+<h1>Vivliostyleで技術同人誌を始めよう</h1>
 
 <div class="footer">
 <ul>

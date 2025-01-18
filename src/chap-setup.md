@@ -4,39 +4,35 @@ class: chapter
 
 # 環境構築
 
-ViviloStyleはJavaScriptで書かれたソフトウェアです。そのため、Vivliostyleを使うためにはJavaScript環境を構築する必要があります。JavaScriptを動かすためにNode.jsが必要です。
+ViviloStyleはJavaScriptで作られたソフトウェアであり、動作時にJavaScrpit処理系としてNode.jsが必要です<span class="footnote">一応主な処理はBunでも動作しますが、一部の処理がNode.js依存があるため、Bunだけでは動作ができないためNode.jsをインストールするのが現状では確実です。</span>。
 
-また、原稿ファイルを編集するためにテキストエディタが必要です。頑張ればWindowsのメモ帳でもなんとかなるかもしれませんが、よほどの理由がなければVisual Studio Codeなどをインストールしてしまいましょう。
+また、原稿ファイルを編集するためにテキストエディタが必要です。頑張ればWindowsのメモ帳でもなんとかなるかもしれませんが、素直にVisual Studio Codeなどをインストールしてしまいましょう。
 
 ## システムにNode.jsをインストールする
 
-最新のLTSというバージョンをいい感じにインストールしてください。既にNode.jsがある人はスキップしても大丈夫です。
+https://nodejs.org から最新のLTS<span class="footnote">LTSはLong Term Supportの略で、Node.jsの最新安定版です。毎年10月頃にLTSの新しいバージョンが登場し、そのバージョンは2年半はメンテナンスされることが保証されています。</span>というバージョンのNode.jsをダウンロードしてインストールしてください。既にNode.jsが動いている人はスキップしても大丈夫です。
 
-* https://nodejs.org からダウンロードする
-
-![Node.jsの公式画面](images/chap-setup/nodejs.png)
+![Node.jsの公式画面](./images/chap-setup/nodejs.png){width=90%}
 
 `Download Node.js (LTS)`ボタンが一つしかないため迷うことはないと思います。
 
-もし何かしらのトラブルがあった場合はChatGPTやClaude・Geminiのような生成AIに質問するなり、なんなりしてなんとか解決してください。本書はJavaScriptの本ではないため、詳しい説明は省略させていただきます。
-
 ## まずリポジトリを作る
 
-本の原稿を履歴管理するためにgitのリポジトリを作成します。一番手っ取り早いやり方は、本書のリポジトリ<span class="footnote">https://github.com/erukiti/vivliostyle-techbook-starter</span>のforkです。
+本の原稿を履歴管理するためにgitのリポジトリを作成します。一番手っ取り早いやり方は、本書のリポジトリ<span class="footnote">https://github.com/erukiti/vivliostyle-techbook-starter</span>はテンプレートリポジトリなので、
 
-![GitHubの画面](./images/chap-setup/fork1.png)
+![GitHubの画面](./images//chap-setup/template1.png)
 
-forkしたいGitHubリポジトリの画面で「Fork (2)」と書かれたボタンを押すとfork画面が出てきます。
+`use this template`と書かれたボタンを押して `create a new repository` を選択すると、テンプレートを元にリポジトリを作成可能です。
 
-![GitHubのfork画面](./images/chap-setup/fork1.png)
+![リポジトリ作成画面](./images/chap-setup/template2.png)
 
-fork画面では、誰のリポジトリにしたいのかオーナーを選び、リポジトリの名前を入力します。リポジトリの名前は本の名前なので、たとえばReactで世界征服する本なら `react-conquer-the-world` みたいな名前になるでしょうか。それらを入力したら `Create fork` ボタンを押せばforkが完了です。少し時間がかかります。
+リポジトリ作成画面では、誰のリポジトリにしたいのかオーナーを選び、リポジトリの名前を入力します。リポジトリの名前は本の名前なので、たとえばReactで世界征服する本なら `react-conquer-the-world` みたいな名前になるでしょうか。本を全世界に公開したいならPublicを選択し、そうじゃなければprivateを選択し `create repository` ボタンを押しましょう。
 
-![fork済みのGitHubリポジトリ](./images/chap-setup/fork3.png)
+![作成されたリポジトリ](./images/chap-setup/template3.png)
 
-詳しくはGitHubの使い方を覚えてください。
+これで、リポジトリができあがりました。
 
-### 確認する
+## 確認する
 
 ここまでの作業で、今あなたが手に取っている本の内容そのものがPDFとして生成されるようになっています。
 
@@ -82,25 +78,10 @@ Run `npm audit` for details.
 % npm run build
 
 > vivliostyle-book-sample@0.0.0 build
-> vivliostyle build -o online.pdf
+> vivliostyle build -o screen.pdf
 
 ✔ 00-title.md vivliostyle-sample
-✔ 01-preface.md まえがき
-✔ part-easy.md vivliostyle-sample
-✔ chap-setup.md セットアップ
-✔ chap-markdown.md Markdown
-✔ chap-build.md PDFを生成する
-✔ chap-onestop.md 【保存版】　入稿までの手順
-✔ part-tips.md vivliostyle-sample
-✔ chap-vivliostyle.md Vivliostyleについて
-✔ chap-theme.md テーマを作る
-✔ chap-font.md フォントを設定する
-✔ chap-toc.md 目次を制する
-✔ chap-mermaid.md Mermaidで図を書く
-✔ chap-markdown-extra.md markdown応用編
-✔ chap-sample.md サンプルと書式
-✔ 90-postscript.md あとがき
-✔ 98-authors.md 著者紹介
+中略
 ✔ 99-colophon.md vivliostyle-sample
 ⊙ Processing PDF
 online.pdf has been created.
@@ -109,9 +90,9 @@ online.pdf has been created.
 
 `Built successfully.` がでてくれば、そのディレクトリにPDFが生えているはずです。最近のVSCodeはPDFのプレビュー機能もあるため、それで簡易的に確認できます。
 
-さて、ここまでで、本書と同じ物を作れることを確認できましたね。重要なマイルストーンを一つクリアできました。
+さてここまでで、本書と同じ物を作れることを確認できましたね。重要なマイルストーンを一つクリアできました。
 
-### 設定を変更する
+## 設定を変更する
 
 このままでは本書と同じ内容の本を作ってしまうことになります。そのため、まずは本の設定を変えましょう。
 
@@ -127,7 +108,9 @@ Vivliostyleでは、本のタイトル、本のサイズ、原稿ファイル名
 
 設定アイルは基本的に生成結果には、まだあまり影響を与えません。
 
-### それぞれの原稿ファイルについて
+## それぞれの原稿ファイルについて
+
+原稿ファイルは `src` ディレクトリの中にファイルがすべて入っています。このディレクトリの中のファイルはOSSとはしていないため、中身をそのまま使うことはおやめください。作りを真似るのはかまいませんが、あなた自身が本を作らなければなりません。
 
 本書では、通常の章はMarkdownで記述していますが、いわゆる扉といわれるタイトルページや、部を示すページなどはHTMLを使っています。
 
@@ -141,7 +124,80 @@ Vivliostyleでは、本のタイトル、本のサイズ、原稿ファイル名
 
 というようにしています。
 
-### CIでPDFが自動生成されているか確認する
+## 印刷用のPDFを作成する
+
+`npm run build` で作成したPDFはデジタル環境向けのものでタブレットなどの画面で見ることを想定しています。ソースコードがプリティプリントと呼ばれる、構文を際立たせる色分けなどをはじめとして、カラー前提です。
+
+ところが、印刷所に出すPDFはフルカラーだと印刷代金がかかりすぎるため1色刷をするのが一般的なことと、フォントのアウトライン化など、印刷向けのPDFにしなければ、印刷所が受け付けてくれない可能性があります。
+
+`npm run build -- --press-ready` もしくは `npm run build:press-ready` コマンドで印刷向けのPDFを作成できます。ただし、このコマンドを実行するときにはDockerが必要となります。
+
+```md
+% bun run build:press-ready
+$ vivliostyle build --press-ready -o print.pdf
+✔ 00-title.md vivliostyle-sample
+中略
+✔ 99-colophon.md vivliostyle-sample
+🚀 Running press-ready
+📦 Launching docker container
+==> Listing fonts in '/data/var/folders/mp/2fv3s_1j6wvddl60_xv7bz700000gn/T/vivliostyle-cli-3207a6c0-d5d4-11ef-95f3-a34d917e92e2.pdf'
+name                          type          embedded  subset
+[none]                        Type 3        yes       no
+中略
+BAAAAA+IBMPlexSerif-Regular   CID TrueType  yes       yes
+==> Some fonts need to be outlined
+==> Generating PDF
+Input            /data/var/folders/mp/2fv3s_1j6wvddl60_xv7bz700000gn/T/vivliostyle-cli-3207a6c0-d5d4-11ef-95f3-a34d917e92e2.pdf
+Output           /data/Users/erukiti/work/writing/vivliostyle-techbook-starter/print.pdf
+Color Mode       CMYK
+Enforce outline  yes
+Boundary boxes   no
+==> Ghostscript: Done without error
+==> Listing fonts in '/data/Users/erukiti/work/writing/vivliostyle-techbook-starter/print.pdf'
+==> No fonts found
+==> Every font is properly embedded
+ℹ Processing PDF
+◡ Processing PDF
+print.pdf has been created.
+🎉 Built successfully.
+```
+
+この長ったらしいコマンドでは、pdffontsというコマンドを使ってフォントの埋め込み状況を確認して、必要があればアウトライン化などの処理を行っています。
+
+通常のPDF作成と同じく `🎉 Built successfully.` が表示されていれば、成功しているはずです。
+
+## PDFが印刷所対応かを確認する
+
+確認する方法としては、Adobe Acrobat Reader を使う方法と、Xpdfというソフトに含まれる `pdffonts` というコマンドを使う方法があります。筆者はAdobe Acrobat Readerを使っていないため、pdffontsでのやり方を書きます。
+
+MacでHomebrewを使っているなら`brew install xpdf`でインストールができます。インストールしたあとは一度ターミナルを抜けないと、インストールされたコマンドを認識してくれないことがあるため要注意です。ターミナルを立ち上げ直すと `pdffonts output.pdf` で確認ができるはずです。
+
+```
+% pdffonts screen.pdf
+name                                           type              emb sub uni prob object ID
+---------------------------------------------- ----------------- --- --- --- ---- ---------
+AAAAAA+Verdana-Bold                            CID TrueType      yes yes yes           4  0
+BAAAAA+Verdana                                 CID TrueType      yes yes yes           5  0
+CAAAAA+Verdana-Bold                            CID TrueType      yes yes yes           8  0
+[none]                                         Type 3            yes no  yes           9  0
+省略
+```
+
+このコマンドはフォントの設定を行ったときに特に重要です。せっかく組版するのだから使いたいフォントを指定したとして、そのフォントが正しく使われているかを確認する必要があります。そういうときに使うと、フォントの名前を確認できます。nameに`[none]` と表示されていますが、これはVivliostyleがPDFを生成するときに使うChromiumの特殊なものが使われているためで、特に問題はありません。
+
+今回は試しにデジタル版のPDFで試した結果こうなっています。このときembにnoがなければ印刷所に投げても問題のないPDFです。もしemvのnoのものがあると、印刷所から「フォント埋め込んでください」という電話がかかってくることになるでしょう。
+
+press-readyで作成したPDFの場合はどうでしょうか？
+
+```
+% pdffonts print.pdf
+name                                           type              emb sub uni prob object ID
+---------------------------------------------- ----------------- --- --- --- ---- ---------
+```
+
+そもそもフォントをすべてアウトライン化しているため、PDFの中にフォント情報は存在していません。
+
+## CIでPDFが自動生成されているか確認する
 
 この本のリポジトリは、GitHub Actions用の設定がされているため、GitHub上でCIが自動で動いてPDFが作成されているはずです。
 
@@ -157,7 +213,7 @@ PDFがローカルで作成したものと同じように見えるか見比べ�
 
 これが、うまく動いていることが確認できれば、複数人で同人誌を書くときにめちゃくちゃ捗るようになります。
 
-### プレビューのやり方
+## プレビューのやり方
 
 `npm run build` でPDFを作成する以外にも `npm run preview` で、ビルドするよりは早く原稿を確認することができます。
 

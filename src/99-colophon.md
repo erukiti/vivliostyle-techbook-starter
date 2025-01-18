@@ -7,7 +7,7 @@ class: colophon
 </div>
 
 <div>
-    <div class="colophon-title">とにかく楽にMarkdownで本を作りたい！</div>
+    <div class="colophon-title">Vivliostyleで技術同人誌を始めよう</div>
     <table>
         <tr>
             <td colspan="3">2025年1月25日 初版発行 第11回 技術書同人誌博覧会</td>

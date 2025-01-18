@@ -7,7 +7,7 @@ const def = {
   title: "vivliostyle-sample", // populated into `publication.json`, default to `title` of the first entry or `name` in `package.json`.
   author: "erukiti <erukiti+github@gmail.com>", // default to `author` in `package.json` or undefined.
   language: "ja", // default to undefined.
-  size: "JIS-B5", // A4: 教科書サイズ、JIS-B5: 最近流行りの小さいサイズの技術書
+  size: "A5", // JIS-B5: 教科書サイズ、A5: 最近流行りの小さいサイズの技術書
   theme: [
     "./fonts",
     "./theme-nice-techbook2",
@@ -29,7 +29,6 @@ const def = {
     "chap-setup.md",
     "chap-howto.md",
     "chap-markdown.md",
-    "chap-build.md",
     "chap-onestop.md",
 
     // 第二部 VivliostyleのTips
@@ -39,8 +38,7 @@ const def = {
     "chap-font.md",
     "chap-toc.md",
     "chap-mermaid.md",
-    "chap-markdown-extra.md",
-    "chap-sample.md",
+    "chap-setup-vivliostyle.md",
 
     // 後書き
     "90-postscript.md",

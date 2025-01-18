@@ -1,18 +1,18 @@
 {
-  "name": "vivliostyle-book-sample",
-  "description": "Vivliostyleを採用した技術同人誌のサンプル",
-  "version": "0.0.0",
+  "name": "vivliostyle-techbook-starter",
+  "description": "Vivliostyleで技術同人誌を始めよう",
+  "version": "1.0.0",
+  "private": true,
   "type": "module",
   "author": "erukiti <erukiti+github@gmail.com>",
   "scripts": {
-    "build": "vivliostyle build -o online.pdf",
-    "build:press-ready": "vivliostyle build --press-ready -o press-ready.pdf",
+    "build": "vivliostyle build -o screen.pdf",
+    "build:press-ready": "vivliostyle build --press-ready -o print.pdf",
     "preview": "vivliostyle preview"
   },
   "dependencies": {
     "@vivliostyle/cli": "^8.17.1",
     "playwright": "^1.49.1",
     "rehype-mermaid": "^3.0.0"
-  },
-  "private": true
+  }
 }
