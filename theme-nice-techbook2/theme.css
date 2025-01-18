@@ -235,6 +235,12 @@ vs-counter-chapterはclass: chapterが定義されているページのみカウ
   /* --vs-theme--page-top-right-content: counter(vs-counter-chapter) '.' counter(vs-counter-sec-h2); */
 }
 
+.chapter h1:first-child::before {
+  display: block;
+  font-size: 75%;
+  margin-bottom: calc(var(--vs-spacing-rlh) / 2);
+}
+
 /* NOTE: 目次に含まれるh1を消すためのワークアラウンド */
 h1:has(+ #toc) {
   display: none;
