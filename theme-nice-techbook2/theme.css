@@ -231,7 +231,7 @@ h1:has(+ #toc) {
 :is(#toc, [role='doc-toc']) li ol li {
   margin-left: -1em;
   margin-top: 0em;
-  --vs-toc--page-leader-content: leader('．');
+  --vs-toc--page-leader-content: leader(' . ');
   font-weight: 500;
 }
 
