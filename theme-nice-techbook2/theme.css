@@ -257,10 +257,6 @@ vs-counter-chapterはclass: chapterが定義されているページのみカウ
   string-set: section-h2-title target-counter('.', vs-counter-chapter) ' ' counter(vs-counter-sec-h2) ' ' content();
 }
 
-.chapter h2 {
-  --vs-section--h2-marker-content: counter(vs-counter-chapter) '.' string(section-h2-title)
-}
-
 @page :right {
   --vs-theme--page-top-right-content: counter(vs-counter-chapter) '.' string(section-h2-title, start);
 }
