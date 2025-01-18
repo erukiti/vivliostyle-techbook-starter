@@ -18,34 +18,52 @@ ViviloStyleはJavaScriptで書かれたソフトウェアです。そのため�
 
 `Download Node.js (LTS)`ボタンが一つしかないため迷うことはないと思います。
 
-## create-bookで、本のディレクトリを作成する
+もし何かしらのトラブルがあった場合はChatGPTやClaude・Geminiのような生成AIに質問するなり、なんなりしてなんとか解決してください。本書はJavaScriptの本ではないため、詳しい説明は省略させていただきます。
 
-VivlioStyleは、必要なファイルがそろっている状態で `vivliostyle build` もしくは `vivliostyle preview` コマンドで実行できます。ところが、この必要なファイルを用意するのは面倒なので普通は `create-book` というツールを使ってファイルを作成します。
+## まずリポジトリを作る
 
-コマンドは `npx create-book <ディレクトリ名>` です。試しに `vivliostyle-techbook-sample` というディレクトリ名で作ってみます。注意点として `choose theme` では `@vivliostyle/theme-techbook` を選択しましょう。
+本の原稿を履歴管理するためにgitのリポジトリを作成します。一番手っ取り早いやり方は、本書のリポジトリ<span class="footnote">https://github.com/erukiti/vivliostyle-techbook-starter</span>のforkです。
+
+![GitHubの画面](./images/chap-setup/fork1.png)
+
+forkしたいGitHubリポジトリの画面で「Fork (2)」と書かれたボタンを押すとfork画面が出てきます。
+
+![GitHubのfork画面](./images/chap-setup/fork1.png)
+
+fork画面では、誰のリポジトリにしたいのかオーナーを選び、リポジトリの名前を入力します。リポジトリの名前は本の名前なので、たとえばReactで世界征服する本なら `react-conquer-the-world` みたいな名前になるでしょうか。それらを入力したら `Create fork` ボタンを押せばforkが完了です。少し時間がかかります。
+
+![fork済みのGitHubリポジトリ](./images/chap-setup/fork3.png)
+
+詳しくはGitHubの使い方を覚えてください。
+
+### 確認する
+
+さて、この状態だと、今あなたが手に取っている本の内容そのものがPDFとして生成されるようになっています。
+
+まずはローカルでPDFが構築できるか確認してみましょう。たとえば、リポジトリは `git@github.com:erukiti/sample1.git` だとします（このリポジトリは存在しません）。
 
 ```sh
-% npx create-book vivliostyle-techbook-sample
-Need to install the following packages:
-create-book@1.1.3
-Ok to proceed? (y) y
-? Description description
-? Author name erukiti
-? Author email erukiti+github@gmail.com
-? License MIT
-? choose theme @vivliostyle/theme-techbook - Techbook (技術同人誌) theme
+% git clone git@github.com:erukiti/sample1.git
+Cloning into 'sample1'...
+remote: Enumerating objects: 573, done.
+remote: Counting objects: 100% (181/181), done.
+remote: Compressing objects: 100% (89/89), done.
+remote: Total 573 (delta 89), reused 154 (delta 70), pack-reused 392 (from 1)
+Receiving objects: 100% (573/573), 39.38 MiB | 9.70 MiB/s, done.
+Resolving deltas: 100% (277/277), done.
+```
 
-Creating a new package in /Users/erukiti/work/writing/vivliostyle-techbook-sample.
+このようにして、手元に `sample1` というディレクトリができたはずです。出来ていない場合は、gitやGitHubの使い方をなんとかして頑張って身につけてみてください。
 
-Initializing a git repository
-> git init
+```sh
+% cd sample1
+% npm i
+npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+中略
 
-Installing dependencies using npm
-> npm install
+added 858 packages, and audited 859 packages in 5s
 
-added 697 packages, and audited 698 packages in 35s
-
-188 packages are looking for funding
+210 packages are looking for funding
   run `npm fund` for details
 
 4 high severity vulnerabilities
@@ -54,180 +72,59 @@ To address all issues (including breaking changes), run:
   npm audit fix --force
 
 Run `npm audit` for details.
-
-Successfully created /Users/erukiti/work/writing/vivliostyle-techbook-sample
-
-1. cd vivliostyle-techbook-sample
-2. create and edit Markdown files
-3. edit entry field in your vivliostyle.config.js
-4. yarn build or npm run build
-
-See https://docs.vivliostyle.org for further information.
-
-🖋 Happy writing!
-
-% cd vivliostyle-techbook-sample
-% ls -al
-total 648
-drwxr-xr-x   11 erukiti  staff     352  1  5 22:21 .
-drwxr-xr-x    8 erukiti  staff     256  1  5 22:20 ..
-drwxr-xr-x    9 erukiti  staff     288  1  5 22:20 .git
--rw-r--r--    1 erukiti  staff    2047  1  5 22:20 .gitignore
--rw-r--r--    1 erukiti  staff    1078  1  5 22:20 LICENSE
--rw-r--r--    1 erukiti  staff     500  1  5 22:20 README.md
--rw-r--r--    1 erukiti  staff    6175  1  5 22:20 manuscript.md
-drwxr-xr-x  476 erukiti  staff   15232  1  5 22:21 node_modules
--rw-r--r--    1 erukiti  staff  299788  1  5 22:21 package-lock.json
--rw-r--r--    1 erukiti  staff     352  1  5 22:20 package.json
--rw-r--r--    1 erukiti  staff    1705  1  5 22:20 vivliostyle.config.js
 ```
 
-VivlioStyleに必要なファイルは
-
-* `package.json`
-* `vivliostyle.config.js`
-* あとは原稿ファイル（このサンプルでは `manuscript.md`）
-
-です。
-
-この状態で `npm run preview` を実行するとChromeに似たChromiumというOSSのブラウザが起動し{吾輩|わがはい}は猫である。を表示するプレビュー画面が表示されます。
-
-![プレビュー画面](images/chap-setup/preview.png){width=100%}
-
-原稿ファイルである `manuscript.md` には、著作権フリーである「{吾輩|わがはい}は猫である。」の冒頭部分がMarkdownで書かれています。
-
-    # {吾輩|わがはい}は猫である。
-
-    {吾輩|わがはい}は猫である。名前はまだ無い。
-    ...(後略)
-
-このファイルを触り続けてもいいですが色々と不便なので、設定ファイルをいじった上で、技術書っぽくしていきましょう。
-
-<!-- たぶん、削れるようになるはず。。。 -->
-<div class="column">
-<div class="column-title">Windowsでビルドできるまで</div>
-
-
-<div class="flush-right">おやかた@oyakata2438</div>
-
-Windows環境で、この原稿をローカルでビルドできるようになるまでにインストールしたパッケージは以下の通り。
-
-
-* Vivliostyle
-* BUN
-* Node.js
-* VFM
-* Playwright
+色々警告が出ますが、いったんそういうものとしてください。これが完了するとPDF生成するための準備ができました。
 
 ```sh
-> npm install -g @vivliostyle/cli
-> powershell -c "irm bun.sh/install.ps1 | iex"
-> Node.jsはhttps://nodejs.org/en/download にインストーラーがある。
-> bun install @vivliostyle/vfm
-> npx playwright install
+% npm run build
+
+> vivliostyle-book-sample@0.0.0 build
+> vivliostyle build -o online.pdf
+
+✔ 00-title.md vivliostyle-sample
+✔ 01-preface.md まえがき
+✔ part-easy.md vivliostyle-sample
+✔ chap-setup.md セットアップ
+✔ chap-markdown.md Markdown
+✔ chap-build.md PDFを生成する
+✔ chap-onestop.md 【保存版】　入稿までの手順
+✔ part-tips.md vivliostyle-sample
+✔ chap-vivliostyle.md VivlioStyleについて
+✔ chap-theme.md テーマを作る
+✔ chap-font.md フォントを設定する
+✔ chap-toc.md 目次を制する
+✔ chap-mermaid.md Mermaidで図を書く
+✔ chap-markdown-extra.md markdown応用編
+✔ chap-sample.md サンプルと書式
+✔ 90-postscript.md あとがき
+✔ 98-authors.md 著者紹介
+✔ 99-colophon.md vivliostyle-sample
+⊙ Processing PDF
+online.pdf has been created.
+🎉 Built successfully.
 ```
 
-ビルドコマンド:
-> bun run build
+`Built successfully.` がでてくれば、そのディレクトリにPDFが生えているはずです。最近のVSCodeはPDFのプレビュー機能もあるため、それで簡易的に確認できます。
 
-環境にもよるし、これから変わるかも…だけど、備忘録として。
-</div>
+さて、ここまでで、本書と同じ物を作れることを確認できましたね。重要なマイルストーンを一つクリアできました。
 
-## 設定を変更する
+### 設定を変更する
 
-さてVivlioStyleの設定は主に`vivliostyle.config.js`を編集します。
+このままでは本書と同じ内容の本を作ってしまうことになります。そのため、まずは本の設定を変えましょう。
 
-筆者のおすすめ設定を書いておきます。
+VivlioStyleでは、本のタイトル、本のサイズ、原稿ファイル名などはすべて `vivliostyle.config.js` に記述されています。
 
-```js
-module.exports = {
-  title: 'vivliostyle-techbook-sample', // populated into `publication.json`, default to `title` of the first entry or `name` in `package.json`.
-  author: 'あなたの名前', // default to `author` in `package.json` or undefined.
-  language: 'ja', // default to undefined.
-  size: 'A4', // paper size. A4 or JIS-B5
-  theme: '@vivliostyle/theme-techbook@^2.0.0', // .css or local dir or npm package. default to undefined.
-  entry: [
-    'chap-hoge.md', // `title` is automatically guessed from the file (frontmatter > first heading).
-  ], // `entry` can be `string` or `object` if there's only single markdown file.
-  entryContext: './contents', // default to '.' (relative to `vivliostyle.config.js`).
-  output: [ // path to generate draft file(s). default to '{title}.pdf'
-    './output.pdf', // the output format will be inferred from the name.
-  ],
-  workspaceDir: '.vivliostyle', // directory which is saved intermediate files.
-  toc: true, // whether generate and include ToC HTML or not, default to 'false'.
-}
-```
+|設定名|内容|
+|-----|----|
+|title|タイトルなんですが標準だと色々なところに埋め込まれて、日本語名を使うと問題が生じることがあるという噂なので、英数字とハイフンくらいに限定して方がいいかもしれません。ただしこのリポジトリの手法でPDFを生成するだけなら何を設定してもしなくても問題はないはずです。|
+|author|著者名と連絡先です。ただしこれもこのリポジトリの手法でPDFを生成するだけなら何を設定してもしなくても問題はないはずです。|
+|language|`ja`が日本語です。|
+|size|ある程度大きな教科書サイズが`A4`で、最近流行の小さいサイズの技術書が`JIS-B5`です。`B5`は国際標準の方なので罠です。|
+|entry|ここに原稿ファイル名を書いてください。ここに書いてないファイル名は参照されません。|
 
-* `title` は本のタイトルです。
-* `author` は著者の名前を書いてください。
-* `language` は日本語 `ja` を指定してください。
-* `size` は原稿の判型で `A4` か `JIS-B5` が一般的です。
-* `theme` は先ほどインストール済みのはずなので、いったん変更しなくても大丈夫です。
-* `entry` は原稿のファイルを示す項目です。適当に自分が分かりやすい名前を付けてください。
-* `entryContext` は原稿ファイルを、どこかのディレクトリに入れるための設定です。この場合は`./contents/chap-hoge.md` に原稿があるというふうに認識されるようになります
-* `output` は出力ファイル名、かつ、別形式のデータ(EPUBなど)を出力するための設定です。いったん `output.pdf` 煮出してしまいましょう。なるべく分かりやすく、かつ英数字で名前を付ける方が安全です。日本語ファイル名だと分かりやすいですが、色々なトラブルに発展しやすいです。
-* `workspaceDir` は生成途中のものを出力するディレクトリです。これを指定しておかないと同じディレクトリに急に不要なファイルが大量に発生するため、絶対に設定した方がいいです。ちなみに初期状態でプレビューを実行すると `manuscripts.html` という不要なファイルができているはずです。
-* `toc` は目次の生成をするかどうか？の設定です。
+設定アイルは基本的に生成結果には、まだあまり影響を与えません。
 
-さて、この設定をした上で `contents` というディレクトリを作成して、`contents/chap-hoge.md` を書いてみましょう。もちろん、すでにある `manuscripts.md` からコピペしてきてもいいでしょう。その上で再度プレビューを開きましょう。たぶん、設定ファイルを変更したときに既存のプレビューは落ちているはずです。
+### それぞれの原稿ファイルについて軽く見ていく
 
-1. タイトルの入った扉
-2. 目次
-3. `chap-hoge.md`に書いた内容
-
-がそれぞれ書かれたプレビューがでてくるはずです。
-
-<div class="column">
-<div class="column-title">初期設定のプレビューで生じる生成物</div>
-初期設定で生じる生成物を紹介しておきます。
-
-* manuscript.html
-* publication.json
-* themes/
-
-これらは `workspaceDir` の設定を修正すると、もれなくそっちのディレクトリ下に生成されるようになるので、不要になります。
-</div>
-
-あとVivlioStyleの `create-book` は `git` を設定しようとしますが `.gitignore` は不完全です。
-
-```
-# VivlioStyle
-
-.vivliostyle
-/*.pdf
-```
-
-を追加しておきましょう。
-
-これで初期セットアップの最低限はできたはずです。gitにコミットしておきましょう。
-
-```sh
-% git add .
-% git status
-On branch main
-
-No commits yet
-
-Changes to be committed:
-  (use "git rm --cached <file>..." to unstage)
-	new file:   .gitignore
-	new file:   LICENSE
-	new file:   README.md
-	new file:   contents/chap-hoge.md
-	new file:   package-lock.json
-	new file:   package.json
-	new file:   vivliostyle.config.js
-
-% git commit
-[main (root-commit) 7b656e2] init
- 7 files changed, 7845 insertions(+)
- create mode 100644 .gitignore
- create mode 100644 LICENSE
- create mode 100644 README.md
- create mode 100644 contents/chap-hoge.md
- create mode 100644 package-lock.json
- create mode 100644 package.json
- create mode 100644 vivliostyle.config.js
-```
-
-余計なファイルを削っていれば、７ファイルがコミットされるはずです。バージョンが変わると話は変わってくるかもしれません。
+TBD
