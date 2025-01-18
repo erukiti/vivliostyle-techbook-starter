@@ -17,6 +17,7 @@
 
 .colophon .colophon-title {
   font-size: 1.5em;
+  font-family: var(--vs--heading-font-family);
 }
 
 .colophon table {

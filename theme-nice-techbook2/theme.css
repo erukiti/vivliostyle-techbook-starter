@@ -169,6 +169,14 @@ pre {
   width: 100%;
 }
 
+table {
+  font-size: 80%;
+}
+
+table th {
+  white-space: nowrap;
+}
+
 .column {
   margin: 2rem 0;
   padding: 1rem;
