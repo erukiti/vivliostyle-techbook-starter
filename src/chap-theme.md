@@ -56,13 +56,16 @@ pre {
   padding: 1rem;
   border: 1px solid #ccc;
   border-radius: 4px;
-  background-color: #f8f9fa;
 }
 
 .column-title {
   font-weight: bold;
+  font-family: var(--vs--heading-font-family);
   margin-bottom: 0.5rem;
-  color: #2c3e50;
+}
+
+.column p:last-child {
+  margin-bottom: 0;
 }
 ```
 

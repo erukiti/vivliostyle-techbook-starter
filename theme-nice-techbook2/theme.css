@@ -161,12 +161,17 @@ pre {
 
 .column-title {
   font-weight: bold;
+  font-family: var(--vs--heading-font-family);
   margin-bottom: 0.5rem;
 }
 
 .column-title::before {
   content: "■コラム";
   margin-right: 0.5rem;
+}
+
+.column p:last-child {
+  margin-bottom: 0;
 }
 
 .flush-right {
