@@ -219,12 +219,12 @@ h1:has(+ #toc) {
 }
 
 /* 目次の章番号を表示するためのスタイル */
-:is(#toc, [role='doc-toc']) li > a::before {
+:is(#toc, [role='doc-toc']) li > a[href^="chap"]::before {
   content: "第" target-counter(attr(href), vs-counter-chapter) "章";
   margin-right: 1em;
 }
 
-:is(#toc, [role='doc-toc']) li ol li > a::before {
+:is(#toc, [role='doc-toc']) li ol li > a[href^="chap"]:before {
   content: target-counter(attr(href), vs-counter-chapter) "." target-counter(attr(href), vs-counter-sec-h2);
   margin-right: 1em;
 }
