@@ -332,3 +332,27 @@ GitHub, Notion, Confluence他、様々なシェアトップのツールが、Mar
 [タイトル](リンク)
 [首相官邸](https://www.kantei.go.jp/)
 ```
+
+## Mermaidで図を描く
+
+ソースコードのような形で作図をするMermaid.jsというソフトがあります。最近はこれに対応したものが増えているため、Mermaidの記法を覚えておくと便利です。このリポジトリでもMermaid対応をしています。
+
+```mermaid:Mermaid記法で書いたフローチャート
+graph TD;
+    A[執筆開始] --> B{原稿は完成した？};
+    B -- Yes --> C[素晴らしい！];
+    B -- No --> D[書こう！];
+    D --> B;
+```
+
+mermaid記法の書き方は次の通りです。
+
+````md
+```mermaid:Mermaid記法で書いたフローチャート
+graph TD;
+    A[執筆開始] --> B{原稿は完成した？};
+    B -- Yes --> C[素晴らしい！];
+    B -- No --> D[書こう！];
+    D --> B;
+```
+````
