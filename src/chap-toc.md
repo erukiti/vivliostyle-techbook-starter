@@ -46,7 +46,7 @@ VivlioStyleではまっとうな自動作成の目次を出すのも少し苦労
 
 <div class="column">
 <div class="column-title">ToCの謎を追った</div>
-目次の自動生成はRe:VIEWから慣れている僕としてはかなり困惑するものでした。
+　目次の自動生成はRe:VIEWから慣れている僕としてはかなり困惑するものでした。
 
 ![](images/chap-vivliostyle/toc.png)
 
@@ -58,7 +58,7 @@ VivlioStyleではまっとうな自動作成の目次を出すのも少し苦労
 
 <div class="column">
 <div class="column-title">最終的にどう対応したのか</div>
-本来であれば、原稿に定義したclassを見て、章の番号を非表示にする制御を入れたかったです。しかし、vivliostyle-cliに含まれる処理を弄りたくなかったのでCSSだけで完結する方法を考えたところ以下のような解決策にたどり着きました。
+　本来であれば、原稿に定義したclassを見て、章の番号を非表示にする制御を入れたかったです。しかし、vivliostyle-cliに含まれる処理を弄りたくなかったのでCSSだけで完結する方法を考えたところ以下のような解決策にたどり着きました。
 
 ```css
 :is(#toc, [role='doc-toc']) li > a[href^="chap"]::before {

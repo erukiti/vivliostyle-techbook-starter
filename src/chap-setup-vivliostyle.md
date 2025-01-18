@@ -89,7 +89,6 @@ VivlioStyleに必要なファイルは
 <div class="column">
 <div class="column-title">Windowsでビルドできるまで</div>
 
-
 <div class="flush-right">おやかた@oyakata2438</div>
 
 Windows環境で、この原稿をローカルでビルドできるようになるまでにインストールしたパッケージは以下の通り。

@@ -165,7 +165,7 @@ Markdownにおける文は、<br />
 
 <div class="column">
 <div class="column-title">箇条書きは多くのソフトで使える</div>
-たとえば、Macの標準アプリに「メモ」があります。メモではMarkdownと同じく、アスタリスク・スペースで過剰書きモードになります。
+　たとえば、Macの標準アプリに「メモ」があります。メモではMarkdownと同じく、アスタリスク・スペースで過剰書きモードになります。
 
 ![メモの箇条書き](./images/chap-markdown/list.png)
 
@@ -281,8 +281,7 @@ MarkdownにそのままHTMLを書けばHTMLとして埋め込まれます。た�
 
 <div class="column">
 <div class="column-title">Markdownの歴史</div>
-
-Markdownと似たようなことをする書式は実は無限といえるくらいあります。たとえばWikipediaは、MediaWikiというシステムで動いていて、MediaWikiの書式があります。また、Wikiの元祖であるWikiWikiWebの書式もありますしWiki系の書式は数十種類以上あります。
+　Markdownと似たようなことをする書式は実は無限といえるくらいあります。たとえばWikipediaは、MediaWikiというシステムで動いていて、MediaWikiの書式があります。また、Wikiの元祖であるWikiWikiWebの書式もありますしWiki系の書式は数十種類以上あります。
 
 元々様々な書式が乱立していて、互換性に苦しんでいたため、Markdownという「人類の共通言語」が登場したことは、当時の界隈にとって重要なことでした。
 
