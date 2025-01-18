@@ -131,7 +131,7 @@ VivlioStyleはCSS組版を行うシステムなのでCSSが必要です。
 
 これだけです。
 
-あとは、vivliostyle.config.jsonにこの、フォントのテーマを登録しましょう。
+あとは、vivliostyle.config.jsにこの、フォントのテーマを登録しましょう。
 
 ```js:vivliostyle.config.js
   theme: [

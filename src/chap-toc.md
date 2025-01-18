@@ -23,16 +23,12 @@ VivlioStyleではまっとうな自動作成の目次を出すのも少し苦労
   entry: [
     // 表紙
     // { rel: "cover" },
-
     // 前書き
     "00-preface.md",
-
     // 目次
     { rel: "contents" },
-
     // 本文
     "chap-erukiti.md",
-
     // 後書き
     "99-postscript.md"
   ],
@@ -47,8 +43,6 @@ VivlioStyleではまっとうな自動作成の目次を出すのも少し苦労
 まず `toc: true` を追加すると目次が自動生成されるようになります。ただし、この時点で生成される目次は、目次の見出しが `Table of Contents` になっています。そこで目次の見出しを変更しましょう。 `tocTitle: "目次"` です。
 
 次に、セクションのどの深さまでを目次に出すか？の設定があります。`sectionDepth: 3`　のように設定しましょう。
-
-
 
 <div class="column">
 <div class="column-title">ToCの謎を追った</div>

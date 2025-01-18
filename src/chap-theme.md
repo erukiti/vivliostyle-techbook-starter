@@ -42,8 +42,7 @@ pre {
 コラムを書けるようにしたい。
 
 <div class="column">
-<div class="column-title">コラム: 参考情報</div>
-
+<div class="column-title">参考情報</div>
 ふが
 ぴよ
 </div>
@@ -64,6 +63,11 @@ pre {
   margin-bottom: 0.5rem;
 }
 
+.column-title::before {
+  content: "■コラム";
+  margin-right: 0.5rem;
+}
+
 .column p:last-child {
   margin-bottom: 0;
 }
@@ -73,8 +77,7 @@ pre {
 
 ```md
 <div class="column">
-<div class="column-title">コラム: 参考情報</div>
-
+<div class="column-title">参考情報</div>
 ふが
 ぴよ
 </div>
