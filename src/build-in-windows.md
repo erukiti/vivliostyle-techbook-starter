@@ -77,7 +77,7 @@ C:\Users\oyakata\Documents\GitHub\vivliostyle-book-sample>npx playwright install
 
 これで終わり！
 
-VivlioStyleでのビルドに成功したときのログ！
+Vivliostyleでのビルドに成功したときのログ！
 
 '''sh
 C:\Users\oyakata\Documents\GitHub\vivliostyle-book-sample>bun run build

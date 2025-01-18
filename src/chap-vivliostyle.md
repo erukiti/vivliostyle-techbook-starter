@@ -2,13 +2,13 @@
 class: chapter
 ---
 
-# VivlioStyleについて
+# Vivliostyleについて
 
 今回、Re:VIEW tecbookスタイルを極力再現して、合同誌に使えるかどうか検証をするという~~苦行~~チャレンジをしてみて、色々と知見を得られたのでここに記します。
 
-VivlioStyleは、HTML+CSSの仕様にそって組版するという、強い思想で作られたプロダクトです。どちらかというと、技術書のような面白みがないものを作るというよりは、HTML+CSSで自在にデザインをいじりたい！という人向けな側面はあるかもしれません。
+Vivliostyleは、HTML+CSSの仕様にそって組版するという、強い思想で作られたプロダクトです。どちらかというと、技術書のような面白みがないものを作るというよりは、HTML+CSSで自在にデザインをいじりたい！という人向けな側面はあるかもしれません。
 
-## VivlioStyleで読まなければならないドキュメント
+## Vivliostyleで読まなければならないドキュメント
 
 GitHubにあるドキュメントが一番確実です。
 
@@ -19,15 +19,15 @@ GitHubにあるドキュメントが一番確実です。
 * 公式サイトのVivliostyle で本を作ろう<span class="footnote">https://vivliostyle.org/ja/make-books-with-vivliostyle/</span>
     * 実際に製本されたサンプルとしてソースコードを読むといいでしょう
 
-## VivlioStyleの構造
+## Vivliostyleの構造
 
-VivlioStyleは、元々はCSSを組版に使うための仕様を、ブラウザ上で無理矢理実現するshimのようなものから始まったようで、その仕様にそって実装されたHTML+CSSをページで区切った形でレンダリングするためのソフトウェアです。たぶん。
+Vivliostyleは、元々はCSSを組版に使うための仕様を、ブラウザ上で無理矢理実現するshimのようなものから始まったようで、その仕様にそって実装されたHTML+CSSをページで区切った形でレンダリングするためのソフトウェアです。たぶん。
 
 要するに、CSS組版エンジンのみが存在していた状態です。ここにコマンドラインからビルドやプレビューができるようになったvivliostyle-cliと、Markdown対応をするためのVFMが追加された形です。
 
 登場人物|役割
 -------|---
-VivlioStyle|CSS組版のエンジン。所定のフォーマットにそったHTML+CSSをレンダリングする
+Vivliostyle|CSS組版のエンジン。所定のフォーマットにそったHTML+CSSをレンダリングする
 vivliostyle-cli|組版エンジン以外の工程を行ってくれるもの。単なるCLIラッパーではない
 VFM|Markdownを、unifiedというOSSを使って特定のHTML構造に変換する
 テーマ|CSSの定義がされている。これをいじることになる

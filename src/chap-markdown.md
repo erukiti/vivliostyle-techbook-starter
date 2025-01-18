@@ -4,11 +4,11 @@ class: chapter
 
 # Markdown
 
-VivlioStyleではHTMLもしくはMarkdownで原稿を書きますが、よほど奇特な人でも無い限りMarkdownで書くことを強く推奨します<span class="footnote">とは言え、MarkdownはHTMLほどの表現力はないため、どうしても特定の凝ったページではHTMLで書く必要性がでてきます。</span>。
+VivliostyleではHTMLもしくはMarkdownで原稿を書きますが、よほど奇特な人でも無い限りMarkdownで書くことを強く推奨します<span class="footnote">とは言え、MarkdownはHTMLほどの表現力はないため、どうしても特定の凝ったページではHTMLで書く必要性がでてきます。</span>。
 
 Markdownとは、元々英語のメールなどテキストコミュニケーションでよく使われる装飾を元に、とても自然な文章っぽく、HTMLの機能の一部を実現できる書式です。とても簡単、かつ様々なところで使われているため是非とも覚えましょう。全世界的な標準の仕組みです。
 
-この章では、特に断りが無い限りはMarkdownの中でも、VivlioStyleで使用可能なVFM<span class="footnote">Vivlio Fravored Markdownの略で、GitHubで使われるGFMの亜種のようなものです。GFMはGitHub Fravored Markdownの略です。</span>という書式について紹介します。
+この章では、特に断りが無い限りはMarkdownの中でも、Vivliostyleで使用可能なVFM<span class="footnote">Vivlio Fravored Markdownの略で、GitHubで使われるGFMの亜種のようなものです。GFMはGitHub Fravored Markdownの略です。</span>という書式について紹介します。
 
 全部を紹介していると分量が多くなりすぎるため、いったんよく使う記法をまとめました。
 
@@ -60,7 +60,7 @@ Markdownにおける文は、<br />
 <!-- なぜかコードブロックがバグるので、4スペースインデントによるコードブロックを採用 -->
     # Markdown
 
-    VivlioStyleではHTMLもしくはMarkdownで原稿を書きます。よほど奇特な人でも無い限りMarkdownで書くことを強く推奨します。
+    VivliostyleではHTMLもしくはMarkdownで原稿を書きます。よほど奇特な人でも無い限りMarkdownで書くことを強く推奨します。
 
     ## 見出し
 
@@ -236,18 +236,18 @@ const hoge = "ほげ"
 
 ## 表
 
-Markdownでは表を書くことができます。ただしMarkdownの中でも表は「方言」に属するため、どのMarkdown処理系でも同じ書き方で使える都は限りません。ここではVivlioStyleで書くためのVFMでの表について説明します。
+Markdownでは表を書くことができます。ただしMarkdownの中でも表は「方言」に属するため、どのMarkdown処理系でも同じ書き方で使える都は限りません。ここではVivliostyleで書くためのVFMでの表について説明します。
 
 名前|対応書式|拡張子|特徴
 ---|--------|-----|----
 Re:VIEW|Re:VIEW専用フォーマット|.re|技術同人誌を書くのに、最も完成されたソフト
-VivlioStyle|Markdown|.md|CSS組版で自由度の高い本を書けるソフト
+Vivliostyle|Markdown|.md|CSS組版で自由度の高い本を書けるソフト
 
 ```md:表
 名前|対応書式|拡張子|特徴
 ---|--------|-----|----
 Re:VIEW|Re:VIEW専用フォーマット|.re|技術同人誌を書くのに、最も完成されたソフト
-VivlioStyle|Markdown|.md|CSS組版で自由度の高い本を書けるソフト
+Vivliostyle|Markdown|.md|CSS組版で自由度の高い本を書けるソフト
 ```
 
 このような記法です。ちなみに、外側に `|` を追加しても同じように表になります。
@@ -256,7 +256,7 @@ VivlioStyle|Markdown|.md|CSS組版で自由度の高い本を書けるソフト
 |名前|対応書式|拡張子|特徴|
 |---|--------|-----|----|
 |Re:VIEW|Re:VIEW専用フォーマット|.re|技術同人誌を書くのに、最も完成されたソフト|
-|VivlioStyle|Markdown|.md|CSS組版で自由度の高い本を書けるソフト|
+|Vivliostyle|Markdown|.md|CSS組版で自由度の高い本を書けるソフト|
 ```
 
 外側に `|` がある方が分かりやすいという考え方もあるかもしれません。どっちでも大丈夫です。

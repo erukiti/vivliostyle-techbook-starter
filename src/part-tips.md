@@ -2,4 +2,4 @@
 class: part
 ---
 
-<h1>VivlioStyleのTips</h1>
+<h1>VivliostyleのTips</h1>

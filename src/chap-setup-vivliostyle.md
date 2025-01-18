@@ -1,8 +1,8 @@
-# VivlioStyleで普通にセットアップをする
+# Vivliostyleで普通にセットアップをする
 
 ## create-bookで、本のディレクトリを作成する
 
-VivlioStyleは、必要なファイルがそろっている状態で `vivliostyle build` もしくは `vivliostyle preview` コマンドで実行できます。ところが、この必要なファイルを用意するのは面倒なので普通は `create-book` というツールを使ってファイルを作成します。
+Vivliostyleは、必要なファイルがそろっている状態で `vivliostyle build` もしくは `vivliostyle preview` コマンドで実行できます。ところが、この必要なファイルを用意するのは面倒なので普通は `create-book` というツールを使ってファイルを作成します。
 
 コマンドは `npx create-book <ディレクトリ名>` です。試しに `vivliostyle-techbook-sample` というディレクトリ名で作ってみます。注意点として `choose theme` では `@vivliostyle/theme-techbook` を選択しましょう。
 
@@ -64,7 +64,7 @@ drwxr-xr-x  476 erukiti  staff   15232  1  5 22:21 node_modules
 -rw-r--r--    1 erukiti  staff    1705  1  5 22:20 vivliostyle.config.js
 ```
 
-VivlioStyleに必要なファイルは
+Vivliostyleに必要なファイルは
 
 * `package.json`
 * `vivliostyle.config.js`
@@ -116,7 +116,7 @@ Windows環境で、この原稿をローカルでビルドできるようにな�
 
 ## 設定を変更する
 
-さてVivlioStyleの設定は主に`vivliostyle.config.js`を編集します。
+さてVivliostyleの設定は主に`vivliostyle.config.js`を編集します。
 
 筆者のおすすめ設定を書いておきます。
 
@@ -169,10 +169,10 @@ module.exports = {
 これらは `workspaceDir` の設定を修正すると、もれなくそっちのディレクトリ下に生成されるようになるので、不要になります。
 </div>
 
-あとVivlioStyleの `create-book` は `git` を設定しようとしますが `.gitignore` は不完全です。
+あとVivliostyleの `create-book` は `git` を設定しようとしますが `.gitignore` は不完全です。
 
 ```
-# VivlioStyle
+# Vivliostyle
 
 .vivliostyle
 /*.pdf

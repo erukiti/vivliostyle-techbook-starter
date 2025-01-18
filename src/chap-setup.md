@@ -6,7 +6,7 @@ class: chapter
 
 <div class="flush-right">@erukiti</div>
 
-ViviloStyleはJavaScriptで書かれたソフトウェアです。そのため、VivlioStyleを使うためにはJavaScript環境を構築する必要があります。JavaScriptを動かすためにNode.jsが必要です。
+ViviloStyleはJavaScriptで書かれたソフトウェアです。そのため、Vivliostyleを使うためにはJavaScript環境を構築する必要があります。JavaScriptを動かすためにNode.jsが必要です。
 
 ## システムにNode.jsをインストールする
 
@@ -74,7 +74,7 @@ To address all issues (including breaking changes), run:
 Run `npm audit` for details.
 ```
 
-`sample1`ディレクトリに移動し `npm i` でVivlioStyleを動かすのに必要なパッケージをインストールします。色々警告が出ますが、いったんそういうものとしてください。これが完了するとPDF生成するための準備ができました。
+`sample1`ディレクトリに移動し `npm i` でVivliostyleを動かすのに必要なパッケージをインストールします。色々警告が出ますが、いったんそういうものとしてください。これが完了するとPDF生成するための準備ができました。
 
 `npm run build` コマンドで電子版PDFが作成できました。
 
@@ -92,7 +92,7 @@ Run `npm audit` for details.
 ✔ chap-build.md PDFを生成する
 ✔ chap-onestop.md 【保存版】　入稿までの手順
 ✔ part-tips.md vivliostyle-sample
-✔ chap-vivliostyle.md VivlioStyleについて
+✔ chap-vivliostyle.md Vivliostyleについて
 ✔ chap-theme.md テーマを作る
 ✔ chap-font.md フォントを設定する
 ✔ chap-toc.md 目次を制する
@@ -115,7 +115,7 @@ online.pdf has been created.
 
 このままでは本書と同じ内容の本を作ってしまうことになります。そのため、まずは本の設定を変えましょう。
 
-VivlioStyleでは、本のタイトル、本のサイズ、原稿ファイル名などはすべて `vivliostyle.config.js` に記述されています。
+Vivliostyleでは、本のタイトル、本のサイズ、原稿ファイル名などはすべて `vivliostyle.config.js` に記述されています。
 
 |設定名|内容|
 |-----|----|
