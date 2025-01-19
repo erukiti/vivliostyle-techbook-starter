@@ -26,8 +26,8 @@ const def = {
 
     // 第一部 とにかく楽をする
     "part-easy.md",
-    "chap-setup.md",
     "chap-howto.md",
+    "chap-setup.md",
     "chap-markdown.md",
     "chap-onestop.md",
 
