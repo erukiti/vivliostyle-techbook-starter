@@ -30,7 +30,7 @@ class: preface
 
 筆者がVivliostyleを使って、Re:VIEW<span class="footnote">https://reviewml.org/ja/</span>と同じような技術同人誌をサクサク作れるようにするために書いた本です。
 
-もともと親方Projectの合同誌をRe:VIEWからVivliostyleに移行できるか？の検証をするというのが主目的です<span class="footnote">親方Projectで記事を寄稿してくれる人のうち、元々技術同人誌をゴリゴリに書いてた人を除けば大体Markdownで原稿を書いています。それならいっそ最初からMarkdown前提のCSS国版に移行したいというモチベーションになりました。</span>。
+もともと僕も寄稿している親方Projectの合同誌をRe:VIEWからVivliostyleに移行できるか？の検証をするというのが主目的です<span class="footnote">親方Projectで記事を寄稿してくれる人のうち、元々技術同人誌をゴリゴリに書いてた人を除けば大体Markdownで原稿を書いています。それならいっそ最初からMarkdown前提のCSS組版に移行したいというモチベーションになりました。</span>。
 
 Re:VIEWは技術同人誌を書く上で標準となっているソフトウェアです。Vivliostyleの強力なライバルといえますが、Vivilostyleでも同じような本が作れることを証明したくてこの本を書いています。
 
