@@ -350,10 +350,10 @@ GitHub, Reddit, Stackflow, Notion, Confluence他、様々なトップシェア�
 ![筆者のアイコン画像](images/erukiti-icon.png)
 ```
 
-文章中に筆者のアイコン画像を16px指定で![筆者のアイコン画像](images/erukiti-icon.png){width=16px}を出すことで絵文字のように扱えます。
+文章中に筆者のアイコン画像を12px指定で ![筆者のアイコン画像](images/erukiti-icon.png){width=12px} を出すことで絵文字のように扱えます。
 
 ```md
-文章中に筆者のアイコン画像を16px指定で![筆者のアイコン画像](images/erukiti-icon.png){width=16px}を出すことで絵文字のように扱えます。
+文章中に筆者のアイコン画像を12px指定で ![筆者のアイコン画像](images/erukiti-icon.png){width=12px} を出すことで絵文字のように扱えます。
 ```
 
 ![筆者のアイコン画像を横100%に引き延ばした](images/erukiti-icon.png){width=100%}
