@@ -90,7 +90,7 @@ $ vivliostyle build -o online.pdf
 ]
 \ Processing PDF
 online.pdf has been created.
-🎉 Built successfully.
+Built successfully.
 '''
 
 ## まとめ

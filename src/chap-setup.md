@@ -85,7 +85,7 @@ Run `npm audit` for details.
 ✔ 99-colophon.md vivliostyle-sample
 ⊙ Processing PDF
 online.pdf has been created.
-🎉 Built successfully.
+Built successfully.
 ```
 
 `Built successfully.` がでてくれば、そのディレクトリにPDFが生えているはずです。最近のVSCodeはPDFのプレビュー機能もあるため、それで簡易的に確認できます。
@@ -159,12 +159,12 @@ Boundary boxes   no
 ℹ Processing PDF
 ◡ Processing PDF
 print.pdf has been created.
-🎉 Built successfully.
+Built successfully.
 ```
 
 この長ったらしいコマンドでは、pdffontsというコマンドを使ってフォントの埋め込み状況を確認して、必要があればアウトライン化などの処理を行っています。
 
-通常のPDF作成と同じく `🎉 Built successfully.` が表示されていれば、成功しているはずです。
+通常のPDF作成と同じく `Built successfully.` が表示されていれば、成功しているはずです。
 
 ## PDFが印刷所対応かを確認する
 
