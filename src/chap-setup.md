@@ -138,8 +138,8 @@ $ vivliostyle build --press-ready -o print.pdf
 ✔ 00-title.md vivliostyle-sample
 中略
 ✔ 99-colophon.md vivliostyle-sample
-🚀 Running press-ready
-📦 Launching docker container
+Running press-ready
+Launching docker container
 ==> Listing fonts in '/data/var/folders/mp/2fv3s_1j6wvddl60_xv7bz700000gn/T/vivliostyle-cli-3207a6c0-d5d4-11ef-95f3-a34d917e92e2.pdf'
 name                          type          embedded  subset
 [none]                        Type 3        yes       no
