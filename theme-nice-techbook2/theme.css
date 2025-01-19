@@ -320,7 +320,7 @@ h1:has(+ #toc) {
   font-weight: 500;
 }
 
-:root:has(#toc), .preface {
+:root:has(#toc), .preface, .afterword {
   --vs-page--mbox-visibility: hidden;
 }
 
