@@ -31,14 +31,14 @@ const def = {
     "chap-markdown.md",
     "chap-onestop.md",
 
-    // 第二部 VivliostyleのTips
+    // 第二部 Vivliostyleについて
     "part-tips.md",
     "chap-vivliostyle.md",
-    "chap-theme.md",
-    "chap-font.md",
-    "chap-toc.md",
-    "chap-mermaid.md",
     "chap-setup-vivliostyle.md",
+    "chap-theme.md",
+    // "chap-font.md",
+    // "chap-toc.md",
+    // "chap-mermaid.md",
 
     // 後書き
     "90-postscript.md",
