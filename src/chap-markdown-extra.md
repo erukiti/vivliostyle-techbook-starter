@@ -1,3 +1,7 @@
+---
+class: chapter
+---
+
 # markdown応用編
 
 ### 相互参照

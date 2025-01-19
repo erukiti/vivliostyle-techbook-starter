@@ -36,7 +36,7 @@
 
 また、親方Projectが出してきた同人誌を底本として商業出版もしています。
 
-* https://www.amazon.co.jp/stores/%E8%A6%AA%E6%96%B9Project/author/B07FLMHLSY
+* https://www.amazon.co.jp/stores/author/B07FLMHLSY
 
 ## 東京ラビットハウスの紹介
 
