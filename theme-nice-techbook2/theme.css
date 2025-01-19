@@ -232,6 +232,9 @@ vs-counter-chapterはclass: chapterが定義されているページのみカウ
   --vs-section--h1-marker-content: '第' counter(vs-counter-chapter) '章';
   --vs-section--h2-marker-content: counter(vs-counter-chapter) '.' counter(vs-counter-sec-h2);
   --vs-section--h3-marker-content: counter(vs-counter-chapter) '.' counter(vs-counter-sec-h2) '.' counter(vs-counter-sec-h3);
+  --vs-section--h4-marker-display: none;
+  --vs-section--h5-marker-display: none;
+  --vs-section--h6-marker-display: none;
   --vs--heading-font-family: 'gothic';
   --vs--heading-font-weight: 700;
 
