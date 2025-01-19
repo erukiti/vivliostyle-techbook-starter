@@ -237,7 +237,7 @@ Markdownでは表を書くことができます。ただしMarkdownの中でも�
 名前|対応書式|拡張子|特徴
 ---|--------|-----|----
 Re:VIEW|Re:VIEW専用フォーマット|.re|技術同人誌を書くのに、最も完成されたソフト
-Vivliostyle|Markdown|.md|CSS組版で自由度の高い本を書けるソフト
+<span class="whitespace-nowrap">Vivliostyle</span>|Markdown|.md|CSS組版で自由度の高い本を書けるソフト
 
 ```md:表
 名前|対応書式|拡張子|特徴

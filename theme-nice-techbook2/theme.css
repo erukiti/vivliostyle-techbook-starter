@@ -213,6 +213,10 @@ p:has(+ p) {
   text-align: right;
 }
 
+.whitespace-nowrap {
+  white-space: nowrap;
+}
+
 /*
 https://gihyo.jp/article/2024/04/vivliostyle-03
 vs-counter-chapterはclass: chapterが定義されているページのみカウントされる
