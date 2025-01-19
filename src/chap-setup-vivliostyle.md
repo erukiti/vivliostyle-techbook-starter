@@ -1,8 +1,10 @@
 # Vivliostyleで普通にセットアップをする
 
+本書では独自のテーマを使っていますが、そういった秘伝のタレに頼らずVivliostyle環境を作る方法をこの章で紹介します。
+
 ## create-bookで、本のディレクトリを作成する
 
-Vivliostyleは、必要なファイルがそろっている状態で `vivliostyle build` もしくは `vivliostyle preview` コマンドで実行できます。ところが、この必要なファイルを用意するのは面倒なので普通は `create-book` というツールを使ってファイルを作成します。
+Vivliostyleは、必要なファイルがそろっている状態で `vivliostyle build` もしくは `vivliostyle preview` コマンドで実行できます。この「必要なファイル」を用意するのは大変なため `create-book` というツールを使ってファイルを作成できます。
 
 コマンドは `npx create-book <ディレクトリ名>` です。試しに `vivliostyle-techbook-sample` というディレクトリ名で作ってみます。注意点として `choose theme` では `@vivliostyle/theme-techbook` を選択しましょう。
 
@@ -85,35 +87,6 @@ Vivliostyleに必要なファイルは
 
 このファイルを触り続けてもいいですが色々と不便なので、設定ファイルをいじった上で、技術書っぽくしていきましょう。
 
-<!-- たぶん、削れるようになるはず。。。 -->
-<div class="column">
-<div class="column-title">Windowsでビルドできるまで</div>
-
-<div class="flush-right">おやかた@oyakata2438</div>
-
-Windows環境で、この原稿をローカルでビルドできるようになるまでにインストールしたパッケージは以下の通り。
-
-
-* Vivliostyle
-* BUN
-* Node.js
-* VFM
-* Playwright
-
-```sh
-> npm install -g @vivliostyle/cli
-> powershell -c "irm bun.sh/install.ps1 | iex"
-> Node.jsはhttps://nodejs.org/en/download にインストーラーがある。
-> bun install @vivliostyle/vfm
-> npx playwright install
-```
-
-ビルドコマンド:
-> bun run build
-
-環境にもよるし、これから変わるかも…だけど、備忘録として。
-</div>
-
 ## 設定を変更する
 
 さてVivliostyleの設定は主に`vivliostyle.config.js`を編集します。
@@ -122,10 +95,10 @@ Windows環境で、この原稿をローカルでビルドできるようにな�
 
 ```js
 module.exports = {
-  title: 'vivliostyle-techbook-sample', // populated into `publication.json`, default to `title` of the first entry or `name` in `package.json`.
-  author: 'あなたの名前', // default to `author` in `package.json` or undefined.
+  title: '<<本のタイトル>>', // populated into `publication.json`, default to `title` of the first entry or `name` in `package.json`.
+  author: '<<あなたの名前と連絡先>>', // default to `author` in `package.json` or undefined.
   language: 'ja', // default to undefined.
-  size: 'A4', // paper size. A4 or JIS-B5
+  size: 'A5', // paper size. A5 or JIS-B5
   theme: '@vivliostyle/theme-techbook@^2.0.0', // .css or local dir or npm package. default to undefined.
   entry: [
     'chap-hoge.md', // `title` is automatically guessed from the file (frontmatter > first heading).

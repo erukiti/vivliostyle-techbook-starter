@@ -2,4 +2,4 @@
 class: part
 ---
 
-<h1>とにかく楽をする</h1>
+<h1>Vivliostyleで本を作る</h1>

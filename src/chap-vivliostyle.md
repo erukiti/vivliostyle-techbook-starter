@@ -4,7 +4,7 @@ class: chapter
 
 # Vivliostyleについて
 
-Vivliostyleというソフトウェアは、HTML+CSSを使ったCSS組版を行うためのエンジンを中心として、使いやすい形にするためのCLIツールや、MarkdownをHTMLに変換するためのVFMも含めたエコシステムでもあります。
+Vivliostyleは、HTML+CSSを使ったCSS組版を行うためのエンジンを中心として、使いやすい形にするためのCLIツールや、MarkdownをHTMLに変換するためのVFMも含めたエコシステムでもあります。
 
 ## 背景
 
