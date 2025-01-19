@@ -166,6 +166,8 @@ AIは細かい校正や文章の精読が得意だと述べましたが、それ
 
 などがあります。
 
-詳しくはZennに記事<span class="footnote">https://zenn.dev/erukiti/articles/2412-writing-book</span>を書いていますので、よろしければ参考にしてください。
+また、AIを執筆や校正に使う場合、いつも以上にしっかり履歴管理をしましょう。AIは何をやらかしてくるか分かりません。
+
+これらのノウハウはZennに記事<span class="footnote">https://zenn.dev/erukiti/articles/2412-writing-book</span>を書いていますので、よろしければ参考にしてください。
 
 なお、このときにAIでRe:VIEWの原稿を様々に編集するのが大変だったことが、今回のモチベーションとなりました。

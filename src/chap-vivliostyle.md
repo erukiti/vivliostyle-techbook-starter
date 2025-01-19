@@ -2,7 +2,7 @@
 class: chapter
 ---
 
-# Vivliostyleについて
+# Vivliostyleとは
 
 Vivliostyleは、HTML+CSSを使ったCSS組版を行うためのエンジンを中心として、使いやすい形にするためのCLIツールや、MarkdownをHTMLに変換するためのVFMも含めたエコシステムでもあります。
 
@@ -21,7 +21,7 @@ Vivliostyleは、2014年にオープンソースでウェブ標準技術を使�
 
 * vivliostyle.js: 元々はエンジンとビューアがメインだった．責務はレンダリングに限定されている
 * vivliostyle-cli: 我々が目にするものの多くは実はCLIが担っている
-* VFM: unifiedの仕組みを使ってMarkdownをHTMLに変換している
+* VFM: unified<span class="footnote">unifiedは、HTMLやMarkdownなどツリー構造で表現できるデータを相互変換したり、加工したりするフレームワークです。</span>の仕組みを使ってMarkdownをHTMLに変換している
 * 2020年から、テーマファイルが開発されるようになった
 
 このように、複数の人間が異なる立場で、エンジン・ビューアと、CLIと、VFMと、テーマを開発してきた、という背景情報を踏まえておくと、Vivliostyleの調査が捗るはずです。
