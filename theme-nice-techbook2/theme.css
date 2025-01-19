@@ -320,6 +320,16 @@ h1:has(+ #toc) {
   font-weight: 500;
 }
 
+/* あとがきや著者紹介のh2は表示しない */
+:is(#toc, [role='doc-toc']) li > a[href^="9"] + ol {
+  display: none;
+}
+
+/* 奥付は表示しない */
+:is(#toc, [role='doc-toc']) li > a[href="99-colophon.html"] {
+  display: none;
+}
+
 :root:has(#toc), .preface, .afterword {
   --vs-page--mbox-visibility: hidden;
 }
