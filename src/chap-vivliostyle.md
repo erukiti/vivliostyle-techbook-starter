@@ -8,7 +8,7 @@ Vivliostyleは、HTML+CSSを使ったCSS組版を行うためのエンジンを�
 
 ## 背景
 
-Vivliostyeは、2014年にオープンソースでウェブ標準技術を使ってCSS組版をするために生まれたプロジェクトです。
+Vivliostyleは、2014年にオープンソースでウェブ標準技術を使ってCSS組版をするために生まれたプロジェクトです。
 
 当時のCSS組版をするための技術は完全な仕様化はされておらず、ブラウザでの実装も壊滅的で、特定のCSS組版を行う限られた商用ソフトウェアのみがあり、それらのソフトウェアの仕様がデファクトスタンダードになっているという状況でした。
 
@@ -42,6 +42,6 @@ GitHubにあるドキュメントが一番確実です。おそらく、Vivliost
 * GitHubにあるVFMのドキュメント<span class="footnote">https://github.com/vivliostyle/vfm/blob/main/docs/ja/vfm.md</span>
     * VFMの詳細な仕様の確認
 * GitHubにある公式テーマ<span class="footnote">https://github.com/vivliostyle/themes</span>
-* 公式サイトのVivliostyle で本を作ろう<span class="footnote">https://vivliostyle.org/ja/make-books-with-vivliostyle/</span>
+* 公式サイトのVivliostyleで本を作ろう<span class="footnote">https://vivliostyle.org/ja/make-books-with-vivliostyle/</span>
     * 実際に製本されたサンプルとセットでソースコードが読めます
 

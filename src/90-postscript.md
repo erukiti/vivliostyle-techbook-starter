@@ -10,9 +10,9 @@ class: afterword
 
 この本は、2024年冬のコミケの終了後、親方ProjectのSlackで次の本について相談しているときに、思いついたものでした。
 
-「ViviliostyleでRe:VIEW並のクォリティの本をサンプルとして書けばいいんじゃないか！？」
+「VivliostyleでRe:VIEW並のクォリティの本をサンプルとして書けばいいんじゃないか！？」
 
-かくして、この本はVivliosytleで本を書くときのサンプル書として始まり、CSS組版でLaTeXのようなクォリティを目指すという苦行を経て、おおよそそれっぽいテーマができあがりました。
+かくして、この本はVivliostyleで本を書くときのサンプル書として始まり、CSS組版でLaTeXのようなクォリティを目指すという苦行を経て、おおよそそれっぽいテーマができあがりました。
 
 本来は、そのテーマと、Vivliostyleを読み解いていった知見をもっと書きたかったのですが、それには時間が短すぎました<span class="footnote">筆者は別に、ZennとGoogle共同開催のAI Agent Hackathon に参加中です。 https://zenn.dev/hackathons/2024-google-cloud-japan-ai-hackathon</span>。
 

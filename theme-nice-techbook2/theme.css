@@ -264,7 +264,7 @@ vs-counter-chapterはclass: chapterが定義されているページのみカウ
 .chapter h1:first-child::before {
   display: block;
   font-size: 75%;
-  margin-bottom: calc(var(--vs-spacing-rlh) / 3);
+  margin-bottom: calc(var(--vs-spacing-rlh) / 2);
 }
 
 /* FIXME: チャプターの１ページ目だけ柱の文字列を消すための回り道
