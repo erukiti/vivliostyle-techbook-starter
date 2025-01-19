@@ -20,10 +20,10 @@
   --vs--p-margin-block: 0;
 
   --vs--heading-line-height: 1.2;
-  --vs--h1-font-size: 2.4em;
-  --vs--h2-font-size: 1.8em;
-  --vs--h3-font-size: 1.4em;
-  --vs--h4-font-size: 1.2em;
+  --vs--h1-font-size: 2em;
+  --vs--h2-font-size: 1.5em;
+  --vs--h3-font-size: 1em;
+  --vs--h4-font-size: 1em;
   --vs--h5-font-size: 1em;
   --vs--h6-font-size: 0.83em;
   --vs--blockquote-margin-inline: 0;
@@ -36,7 +36,7 @@
   --vs--table-border-width-tfoot-inner: 1px;
   --vs--table-border-width-column: 0;
   --vs--table-border-width-row: 0.4px;
-  --vs--table-cell-padding-inline: 1rem;
+  --vs--table-cell-padding-inline: 0.75rem;
 
   --vs-footnote--area-before-margin-block: calc(var(--vs-spacing-rlh) * 0.25);
   --vs-footnote--area-before-margin-inline: 0 70%;
@@ -264,7 +264,7 @@ vs-counter-chapterはclass: chapterが定義されているページのみカウ
 .chapter h1:first-child::before {
   display: block;
   font-size: 75%;
-  margin-bottom: calc(var(--vs-spacing-rlh) / 2);
+  margin-bottom: calc(var(--vs-spacing-rlh) / 3);
 }
 
 /* FIXME: チャプターの１ページ目だけ柱の文字列を消すための回り道
