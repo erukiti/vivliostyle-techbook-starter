@@ -7,7 +7,7 @@
   "author": "erukiti <erukiti+github@gmail.com>",
   "scripts": {
     "build": "vivliostyle build -o screen.pdf",
-    "build:press-ready": "vivliostyle build --press-ready -o print.pdf",
+    "build:print": "vivliostyle build -o print.pdf --press-ready --preflight-option  no-enforce-outline gray-scale",
     "preview": "vivliostyle preview"
   },
   "dependencies": {

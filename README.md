@@ -16,14 +16,14 @@ npm i
 
 ## 本を作成
 
-本を作成するコマンドは `npm run build` と `npm run build:press-ready` です。
+本を作成するコマンドは `npm run build` と `npm run build:print` です。
 
 ```sh:オンラインで使う前提のカラーPDFを作成するコマンド
 npm run build
 ```
 
 ```sh:印刷対応の、なるべく白黒に寄せたPDFを作成するコマンド
-npm run build:press-ready
+npm run build:print
 ```
 
 ## プレビュー
