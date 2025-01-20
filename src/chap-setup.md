@@ -125,41 +125,9 @@ Vivliostyleでは、本のタイトル、本のサイズ、原稿ファイル名
 
 `npm run build` で作成したPDFはデジタル環境向けのものでタブレットなどの画面で見ることを想定しています。ソースコードがプリティプリントと呼ばれる、構文を際立たせる色分けなどをはじめとして、カラー前提です。
 
-ところが、印刷所に出すPDFはフルカラーだと印刷代金がかかりすぎるため1色刷をするのが一般的なことと、フォントのアウトライン化など、印刷向けのPDFにしなければ、印刷所が受け付けてくれない可能性があります<span class="footnote">検証がまだ完了してないのですが、アウトライン化をしてなくてもフォントを全部埋め込めば印刷所としては問題ないはずです。カラーの問題だけ解決する必要があります。</span>。
+ところが、印刷所に出すPDFはフルカラーだと印刷代金がかかりすぎるため1色刷をするのが一般的なことと、全部のフォントの埋め込みもしくは、アウトライン化など、印刷向けのPDFにしなければ、印刷所が受け付けてくれない可能性があります。
 
-`npm run build -- --press-ready` もしくは `npm run build:press-ready` コマンドで印刷向けのPDFを作成できます。ただし、このコマンドを実行するときにはDockerが必要となります。
-
-```md
-% bun run build:press-ready
-$ vivliostyle build --press-ready -o print.pdf
-✔ 00-title.md vivliostyle-sample
-中略
-✔ 99-colophon.md vivliostyle-sample
-Running press-ready
-Launching docker container
-==> Listing fonts in '/data/var/folders/mp/2fv3s_1j6wvddl60_xv7bz700000gn/T/vivliostyle-cli-3207a6c0-d5d4-11ef-95f3-a34d917e92e2.pdf'
-name                          type          embedded  subset
-[none]                        Type 3        yes       no
-中略
-BAAAAA+IBMPlexSerif-Regular   CID TrueType  yes       yes
-==> Some fonts need to be outlined
-==> Generating PDF
-Input            /data/var/folders/mp/2fv3s_1j6wvddl60_xv7bz700000gn/T/vivliostyle-cli-3207a6c0-d5d4-11ef-95f3-a34d917e92e2.pdf
-Output           /data/Users/erukiti/work/writing/vivliostyle-techbook-starter/print.pdf
-Color Mode       CMYK
-Enforce outline  yes
-Boundary boxes   no
-==> Ghostscript: Done without error
-==> Listing fonts in '/data/Users/erukiti/work/writing/vivliostyle-techbook-starter/print.pdf'
-==> No fonts found
-==> Every font is properly embedded
-ℹ Processing PDF
-◡ Processing PDF
-print.pdf has been created.
-Built successfully.
-```
-
-これはpdffontsというコマンドを使ってフォントの埋め込み状況を確認して、必要があればアウトライン化などの処理を行っています。
+`npm run build:print` コマンドで印刷向けのPDFを作成できます。元々 `npm run build` で生成されるPDFは印刷所に提出しても問題ないため、このコマンドではコードブロックの色つけを抑制だけしています。
 
 通常のPDF作成と同じく `Built successfully.` が表示されていれば、成功しているはずです。
 

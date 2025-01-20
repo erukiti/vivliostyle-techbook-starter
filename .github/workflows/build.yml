@@ -44,14 +44,11 @@ jobs:
         run: |
           sudo apt-get purge -y fonts-wqy-zenhei
 
-      - name: build online book
+      - name: build book for screen
         run: bun run build
 
-      - name: install press-ready dependencies
-        run: sudo apt-get install -y ghostscript poppler-utils
-
-      - name: build press-ready book
-        run: bun run build:press-ready --preflight press-ready-local
+      - name: build book for print
+        run: bun run build:print
 
       # PDFのアップロード
       - name: Upload PDF artifacts
@@ -59,13 +56,4 @@ jobs:
         with:
           name: Artifacts
           path: ./*.pdf
-          retention-days: 3
-
-      # Playwrightレポートのアップロード
-      - name: Upload Playwright report
-        uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: playwright-report
-          path: playwright-report/
           retention-days: 3

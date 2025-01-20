@@ -1,7 +1,7 @@
 import { VFM } from "@vivliostyle/vfm";
 import rehypeMermaid from "rehype-mermaid";
 
-const isPressReady = process.argv.includes("--press-ready");
+const isPrint = process.argv.includes("print.pdf");
 
 const def = {
   title: "vivliostyle-sample", // populated into `publication.json`, default to `title` of the first entry or `name` in `package.json`.
@@ -77,7 +77,7 @@ const def = {
   },
 };
 
-if (isPressReady) {
+if (isPrint) {
   def.theme = [
     ...def.theme,
     // グレースケール印刷可能なPDF
