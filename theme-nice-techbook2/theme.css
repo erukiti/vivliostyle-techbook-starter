@@ -308,6 +308,11 @@ h1:has(+ #toc) {
   display: none;
 }
 
+/* 目次で最初のtitleページを非表示にする */
+#toc h2 + ol > li:first-child {
+  display: none;
+}
+
 /* 目次の章番号を表示するためのスタイル */
 :is(#toc, [role='doc-toc']) li > a[href^="chap"]::before {
   content: "第" target-counter(attr(href), vs-counter-chapter) "章";

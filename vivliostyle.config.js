@@ -17,7 +17,8 @@ const def = {
     // { rel: "cover" },
 
     // 扉
-    "00-title.md",
+    // "00-title.md",
+    "title.html",
     // 前書き
     "01-preface.md",
 
