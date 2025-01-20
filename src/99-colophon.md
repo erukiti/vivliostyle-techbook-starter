@@ -29,11 +29,6 @@ class: colophon
         </tr>
         <tr>
             <td>　</td>
-            <td>X(Twitter)</td>
-            <td>@erukiti</td>
-        </tr>
-        <tr>
-            <td>　</td>
             <td>印刷所</td>
             <td>ねこのしっぽ</td>
         </tr>
