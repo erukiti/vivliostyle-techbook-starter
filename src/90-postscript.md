@@ -14,11 +14,11 @@ class: afterword
 
 かくして、この本はVivliostyleで本を書くときのサンプル書として始まり、CSS組版でLaTeXのようなクォリティを目指すという苦行を経て、おおよそそれっぽいテーマができあがりました。
 
-本来は、そのテーマと、Vivliostyleを読み解いていった知見をもっと書きたかったのですが、それには時間が短すぎました<span class="footnote">筆者は別に、ZennとGoogle共同開催のAI Agent Hackathon に参加中です。 https://zenn.dev/hackathons/2024-google-cloud-japan-ai-hackathon</span>。
+本来は、そのテーマと、Vivliostyleを読み解いていった知見をもっと書きたかったのですが、それには時間が短すぎました<span class="footnote">なお、筆者は別に、ZennとGoogle共同開催のAI Agent Hackathon に参加中です。 https://zenn.dev/hackathons/2024-google-cloud-japan-ai-hackathon</span>。
 
 元々「本を書くのはだるいけど組版だけしたい！」と常々言っていたもっとさんや、親方Projectを率いる親方氏をはじめとする親方Projectのメンバーの協力のもと、本書ができあがりました。
 
-三週間ほどの期間でここまで書けただけでも自分（と協力してくれた方々）を褒めてあげたい著者です。
+たった三週間ほどの期間でここまで書けただけでもすごいと思いませんか！？
 
 ## 残る課題
 
@@ -29,7 +29,7 @@ class: afterword
 * GitHub Actionsの説明
 * リファレンス系をなんとかする<span class="footnote">Re:VIEWでは `@<chapref>{xxx}` で別の章の番号や名前を参照可能です。図表なども参照可能です。これらのリファレンス機能はとても便利なため、なんとかして再現したいものです。一部、図や表に関してのみ参照する方法はあるようですが…。</span>
 
-などが残る課題でしょうか。ver2となって進化するかもしれないし、飽きて忘れているかもしれません。
+などが残る課題でしょう。Vivliostyleについての理解をもっと深めたいところです。
 
 ## 親方Projectの紹介
 

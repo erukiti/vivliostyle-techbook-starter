@@ -161,21 +161,6 @@ module.exports = {
 
 ```sh
 % git add .
-% git status
-On branch main
-
-No commits yet
-
-Changes to be committed:
-  (use "git rm --cached <file>..." to unstage)
-	new file:   .gitignore
-	new file:   LICENSE
-	new file:   README.md
-	new file:   contents/chap-hoge.md
-	new file:   package-lock.json
-	new file:   package.json
-	new file:   vivliostyle.config.js
-
 % git commit
 [main (root-commit) 7b656e2] init
  7 files changed, 7845 insertions(+)

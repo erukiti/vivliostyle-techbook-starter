@@ -11,28 +11,34 @@
 ## install
 
 ```sh
-bun i
+npm i
 ```
 
 ## 本を作成
 
-本を作成するコマンドは `bun run build` と `bun run build:press-ready` です。
+本を作成するコマンドは `npm run build` と `npm run build:press-ready` です。
 
 ```sh:オンラインで使う前提のカラーPDFを作成するコマンド
-bun run build
+npm run build
 ```
 
 ```sh:印刷対応の、なるべく白黒に寄せたPDFを作成するコマンド
-bun run build:press-ready
+npm run build:press-ready
 ```
 
 ## プレビュー
 
 ```sh
-bun run preview
+npm run preview
 ```
 
-## フォント
+## ライセンス
+
+* `src/*` は原稿ファイルと画像ファイルなのでオープンソースとしてのライセンスは付与しません。
+* サンプルコードは普通に使っていただいてかまいません
+* それ以外のファイルはMIT Licenseのもと使っていただいてかまいません。設定ファイルには筆者の名前や、この本のタイトルなどが書かれいているためご自身の物に書き換えることは忘れないでください。
+
+### 使用しているフォントのライセンス
 
 License: SIL Open Font License, Version 1.1.
 
