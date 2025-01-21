@@ -370,26 +370,3 @@ GitHub, Stackoverflow, Notion, Confluence他、様々なトップシェアのツ
 ```
 ![筆者のアイコン画像](images/erukiti-icon.png){width=100%}
 ```
-
-## Mermaidで図を描く（本書固有）
-
-ソースコードのような形で作図をするMermaid.jsというソフトがあります。最近はこれに対応したものが増えているため、Mermaidの記法を覚えておくと便利です。このリポジトリでもMermaid対応をしています。
-
-````md
-```mermaid:Mermaid記法で書いたフローチャート
-graph TD;
-    A[執筆開始] --> B{原稿は完成した？};
-    B -- Yes --> C[素晴らしい！];
-    B -- No --> D[書こう！];
-    D --> B;
-```
-````
-
-```mermaid:Mermaid記法で書いたフローチャート
-graph TD;
-    A[執筆開始] --> B{原稿は完成した？};
-    B -- Yes --> C[素晴らしい！];
-    B -- No --> D[書こう！];
-    D --> B;
-```
-

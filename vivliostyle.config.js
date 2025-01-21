@@ -1,5 +1,4 @@
 import { VFM } from "@vivliostyle/vfm";
-import rehypeMermaid from "rehype-mermaid";
 
 const isPrint = process.argv.includes("print.pdf");
 
@@ -37,9 +36,6 @@ const def = {
     "chap-vivliostyle.md",
     "chap-setup-vivliostyle.md",
     "chap-theme.md",
-    // "chap-font.md",
-    // "chap-toc.md",
-    // "chap-mermaid.md",
 
     // 後書き
     "90-postscript.md",
@@ -66,15 +62,6 @@ const def = {
     // options of VFM processor
     //   hardLineBreaks: true, // converts line breaks of VFM to <br> tags. default to 'false'.
     //   disableFormatHtml: true, // disables HTML formatting. default to 'false'.
-  },
-  documentProcessor: (config, metadata) => {
-    return VFM(config, metadata).use(rehypeMermaid, {
-      strategy: "img-png",
-      //
-      mermaidConfig: {
-        fontFamily: "'IBM Plex Serif', 'BIZ UD Mincho', sans-serif",
-      },
-    });
   },
 };
 

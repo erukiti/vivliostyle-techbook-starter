@@ -12,9 +12,7 @@
     "preview": "vivliostyle preview"
   },
   "dependencies": {
-    "@vivliostyle/cli": "^8.17.1",
-    "playwright": "^1.49.1",
-    "rehype-mermaid": "^3.0.0"
+    "@vivliostyle/cli": "^8.17.1"
   },
   "engines": {
     "node": ">=20.0.0"

@@ -36,14 +36,6 @@ jobs:
           fc-list | grep -i "harano" || true
           fc-list | grep -i "biz" || true
 
-      - name: Install Playwright
-        # run: bunx playwright install --with-deps chromium
-        run: bunx playwright install chromium
-
-      - name: remove wqy-zenhei fonts
-        run: |
-          sudo apt-get purge -y fonts-wqy-zenhei
-
       - name: build book for screen
         run: bun run build
 
