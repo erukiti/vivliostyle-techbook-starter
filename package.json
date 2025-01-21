@@ -8,7 +8,7 @@
   "scripts": {
     "build": "vivliostyle build -o screen.pdf",
     "build:print": "vivliostyle build -o print.pdf",
-    "build:press-ready": "vivliostyle build -o print.pdf --press-ready --preflight-option  no-enforce-outline gray-scale",
+    "build:press-ready": "vivliostyle build -o print.pdf --press-ready --preflight-option gray-scale",
     "preview": "vivliostyle preview"
   },
   "dependencies": {
