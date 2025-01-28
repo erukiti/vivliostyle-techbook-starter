@@ -157,7 +157,7 @@ Markdownにおける文はでは、<br/>
 
 <div class="column">
 <div class="column-title">箇条書きは多くのソフトで使える</div>
-　たとえば、Macの標準アプリに「メモ」があります。メモではMarkdownと同じく、アスタリスク・スペースで過剰書きモードになります。
+　たとえば、Macの標準アプリに「メモ」があります。メモではMarkdownと同じく、アスタリスク・スペースで箇条書きモードになります。
 
 ![メモの箇条書き](./images/chap-markdown/list.png){width=500px}
 
